@@ -1,10 +1,9 @@
 import * as t from './action-types'
 
-const initialState = {
+export const initialState = {
   isLoaded: false,
   isLoading: false,
-  // @revert To undefined
-  user: { email: 'foo@bar.com' },
+  user: undefined,
   credentials: undefined,
   error: undefined
 }
