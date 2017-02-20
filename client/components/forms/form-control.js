@@ -8,7 +8,7 @@ class FormControl extends Component {
     const { componentClass: Component, className, style, submitted, ...props } = this.props
     const {
       $formRedux: { formInline, submitting, dirty },
-      $formGroup: { controlId, ...field }
+      $formGroup: { controlId, layout, error, touched, valid, ...field }
     } = this.context
 
     return (
