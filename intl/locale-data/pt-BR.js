@@ -573,31 +573,31 @@ export default {
   // routepath: /mobilizations/:mobilization_id/customDomain
   'page--mobilizations-domain.form-domain.success-message': 'Oba! Já salvamos os dados do seu domínio',
 
-  // component mobilizations form domain
+    // component mobilizations form domain
   // filepath: /client/mobilizations/components/form-domain.js
   // routepath:
   //   - /mobilizations/:mobilization_id/customDomain
   //   - /mobilizations/:mobilization_id/launch
   'mobilizations.components--form-domain.basic.header-toggle.use-existing-domain': 'Quero usar o domínio principal da minha comunidade',
-  'mobilizations.components--form-domain.basic.header-toggle.create-domain': 'Quero cadastrar um domínio principal para a minha comunidade',
-  'mobilizations.components--form-domain.basic.helper-text': 'Digite abaixo o subdomínio e escolha um domínio para seu BONDE',
+  'mobilizations.components--form-domain.basic.header-toggle.create-domain': 'Quero cadastrar um domínio principal na minha comunidade',
+  'mobilizations.components--form-domain.basic.helper-text': 'Digite aqui embaixo o subdomínio e escolha um domínio para o seu BONDE',
   'mobilizations.components--form-domain.basic.form.subdomain.label': 'Subdomínio',
   'mobilizations.components--form-domain.basic.form.subdomain.placeholder': 'nomedamob',
   'mobilizations.components--form-domain.basic.form.domain.label': 'Domínio Principal',
-  'mobilizations.components--form-domain.basic.create-domain.helper-text': 'Ops, você ainda não tem um domínio configurado na sua comunidade. Se quiser cadastar, {link}. Senão você pode, abaixo, usar um domínio externo para configurar o endereço da sua mobilização.',
+  'mobilizations.components--form-domain.basic.create-domain.helper-text': 'Ops, sua comunidade ainda não tem um domíno configurado. Quer cadastrar um agora? é só vir aqui {link}. Senão tudo bem, você pode usar um domínio externo aqui embaixo para configurar o seu BONDE.',
   'mobilizations.components--form-domain.basic.create-domain.helper-text.link': 'clique aqui',
 
   'mobilizations.components--form-domain.advanced.header-toggle': 'Quero usar um domínio externo',
-  'mobilizations.components--form-domain.advanced.helper-text': 'Se você quer usar um domínio que comprou mas não está cadastrado na sua comunidade aqui, pode fazer isso. Por exemplo, se você já comprou www.meudominio.com.br você pode usá-lo para este BONDE. Demais, né? Preencha o campo abaixo e siga as orientações:',
-  'mobilizations.components--form-domain.advanced.form.external-domain.label': 'Domínio personalizado',
+  'mobilizations.components--form-domain.advanced.helper-text': 'Quer usar um domínio que você já comprou para o seu BONDE? Vem que dá. Por exemplo, se você já comprou www.meudominio.com.br é só preencher o campo aqui embaixo e seguir as orientações para usá-lo no seu BONDE:',
+  'mobilizations.components--form-domain.advanced.form.external-domain.label': 'Já tenho um domínio',
   'mobilizations.components--form-domain.advanced.form.external-domain.placeholder': 'meudominio.com.br',
 
-  'mobilizations.components--form-domain.cname-table.helper-text': '{strong}: você vai precisar configurar este domínio no seu servidor de registro para que o endereço seja redirecionado à página da sua mobilização. Pra isso, você vai precisar dessas informações aqui embaixo, anote aí:',
+  'mobilizations.components--form-domain.cname-table.helper-text': '{strong}: você vai precisar configurar este domínio no seu servidor de registro para que o endereço seja redirecionado à página do seu BONDE. Pra isso, você vai precisar dessas informações aqui embaixo, pega aí:',
   'mobilizations.components--form-domain.cname-table.helper-text.strong': 'Não esqueça',
   'mobilizations.components--form-domain.cname-table.header.name': 'Nome',
   'mobilizations.components--form-domain.cname-table.header.record-type': 'Tipo',
   'mobilizations.components--form-domain.cname-table.header.data': 'Dados',
-  'mobilizations.components--form-domain.cname-table.footer.helper-text': 'Se tiver alguma dúvida, dá uma olhada no tópico "Configurando seu domínio no BONDE", no nosso tutorial, o {link}.',
+  'mobilizations.components--form-domain.cname-table.footer.helper-text': 'Se tiver alguma dúvida, dá uma olhada no tópico "Configurando seu domínio no BONDE", no nosso tutorial, aqui {link}.',
 
   // component mobrender mobilization
   // filepath: /client/mobrender/components/mobilization.js
@@ -613,7 +613,7 @@ export default {
   'mobrender.components--block-config-menu.item.toggle-visibility.show': 'Mostrar',
   'mobrender.components--block-config-menu.item.toggle-visibility.hide': 'Esconder',
   'mobrender.components--block-config-menu.item.remove': 'Remover',
-  'mobrender.components--block-config-menu.item.remove.confirm': 'Você tem certeza que quer remover este bloco?',
+  'mobrender.components--block-config-menu.item.remove.confirm': 'Tem certeza que quer remover este bloco?',
   'mobrender.components--block-config-menu.item.move-up': 'Mover para cima',
   'mobrender.components--block-config-menu.item.move-down': 'Mover para baixo',
 
@@ -635,59 +635,59 @@ export default {
   // routepath:
   //   - /mobilizations/:mobilization_id/launch
   //   - /mobilizations/:mobilization_id/sharing
-  'mobilizations.components--form-share.facebook.title': 'Share de Facebook',
-  'mobilizations.components--form-share.facebook.helper-text': 'Configure o post que será publicado no Facebook sempre que alguém compartilhar a ação. É importante que esses textos sejam cativantes e curtos para não aparecerem cortados. :)',
+  'mobilizations.components--form-share.facebook.title': 'Compartilhamento no Facebook',
+  'mobilizations.components--form-share.facebook.helper-text': 'Deixe o post de Facebook do seu BONDE com a sua cara. Pra ele chegar causando, os textos precisam ser impactantes e curtos, para não aparecerem cortados. :)',
   'mobilizations.components--form-share.facebook.form.share-image.label': 'Imagem',
   'mobilizations.components--form-share.facebook.form.share-title.label': 'Título do post',
-  'mobilizations.components--form-share.facebook.form.share-title.placeholder': 'Um título direto que passe a ideia da sua mobilização',
+  'mobilizations.components--form-share.facebook.form.share-title.placeholder': 'Um título forte que apresente o seu BONDE',
   'mobilizations.components--form-share.facebook.form.share-description.label': 'Subtítulo do post',
-  'mobilizations.components--form-share.facebook.form.share-description.placeholder': 'Complete a informação do título e chame o leitor para a mobilização',
+  'mobilizations.components--form-share.facebook.form.share-description.placeholder': 'Complete a ideia do título e convide a galera pro seu BONDE',
 
-  'mobilizations.components--form-share.twitter.title': 'Share de Twitter',
-  'mobilizations.components--form-share.twitter.helper-text': 'Configure a mensagem que será publicada no Twitter sempre que alguém compartilhar sua mobilização.',
+  'mobilizations.components--form-share.twitter.title': 'Compartilhamento no Twitter',
+  'mobilizations.components--form-share.twitter.helper-text': 'Deixe o tweet do seu BONDE com a sua cara. Toda vez que alguém twittar seu conteúdo, é desse jeito que ele vai pra timeline :)
   'mobilizations.components--form-share.twitter.form.share-text.label': 'Texto do Tweet',
-  'mobilizations.components--form-share.twitter.form.share-text.placeholder': 'Insira uma frase e chame o leitor para a mobilização',
+  'mobilizations.components--form-share.twitter.form.share-text.placeholder': 'Crie uma frase e convide a galera pro seu BONDE',
 
   // page mobilizations launch
   // filepath: /routes/admin/authenticated/sidebar/mobilizations-launch/page.js
   // routepath: /mobilizations/:mobilization_id/launch
-  'page--mobilizations-launch.title': 'Lançando sua mobilização',
-  'page--mobilizations-launch.steps.form-domain.title': 'Configure o endereço da mobilização',
+  'page--mobilizations-launch.title': 'Colocando seu BONDE na rua',
+  'page--mobilizations-launch.steps.form-domain.title': 'Configure o endereço o BONDE',
   'page--mobilizations-launch.steps.form-share.title': 'Configure as informações de compartilhamento',
   'page--mobilizations-launch.steps.done.title': 'Seu BONDE está pronto!',
-  'page--mobilizations-launch.steps.done.helper-text': 'Em uma nova aba, digite o endereço que cadastrou na mobilização para se certificar de que ela já está no ar. Se ainda não estiver, cheque se cadastrou os domínios corretamente. Está tudo certo? Então é só esperar ele propagar pela internet!',
-  'page--mobilizations-launch.steps.done.button.open': 'Visualizar mobilização',
-  'page--mobilizations-launch.button.saving': 'Salvando...',
-  'page--mobilizations-launch.button.launch': 'Lançar mobilização',
-  'page--mobilizations-launch.button.next': 'Continuar',
+  'page--mobilizations-launch.steps.done.helper-text': 'Em uma nova aba, digite o endereço do seu BONDE e veja se ele já está no ar. Se ainda não estiver, dá uma olhada se cadastrou os domínios corretamente. Tudo certo? Então é só esperar ele propagar pela internet!',
+  'page--mobilizations-launch.steps.done.button.open': 'Ver seu BONDE',
+  'page--mobilizations-launch.button.saving': 'Só mais um pouco...',
+  'page--mobilizations-launch.button.launch': 'Subir BONDE',
+  'page--mobilizations-launch.button.next': 'Tudo certo!',
   'page--mobilizations-launch.form-share.validation.required': 'Obrigatório',
 
   // page mobilizations launch end
   // filepath: /routes/admin/authenticated/sidebar/mobilizations-launch-end/page.js
   // routepath: /mobilizations/:mobilization_id/launch/end
   'page--mobilizations-launch-end.heading.all-done': 'Tudo pronto?',
-  'page--mobilizations-launch-end.heading.just-launch': 'Agora é só lançar e contar pra todo mundo!',
+  'page--mobilizations-launch-end.heading.just-launch': 'Agora é só botar ele na rua e contar pra todo mundo!',
   'page--mobilizations-launch-end.title': 'Chegou a hora',
-  'page--mobilizations-launch-end.button': 'Lançar mobilização',
+  'page--mobilizations-launch-end.button': 'Subir BONDE',
 
   // page templates list
   // filepath: /routes/admin/authenticated/sidebar/templates-list/page.js
   // routepath: /mobilizations/templates/list
   'page--templates-list.header.title': 'Seus templates',
   'page--templates-list.empty-list.no-template': 'Nenhum template criado.',
-  'page--templates-list.empty-list.create-one': 'Crie a partir de uma mobilização.',
-  'page--templates-list.empty-list.mobilization-list': 'Lista de mobilizações',
+  'page--templates-list.empty-list.create-one': 'Copiar template de um BONDE.',
+  'page--templates-list.empty-list.mobilization-list': 'Meus BONDES',
   'page--templates-list.more-menu-action.remove.text': 'Remover',
-  'page--templates-list.more-menu-action.remove.confirm': 'Tem certeza que deseja remover este template? Ao confirmar, não é possível desfazer esta ação.',
+  'page--templates-list.more-menu-action.remove.confirm': 'Tem certeza que deseja remover este template? Se você confirmar, não vai conseguir mais desfazer a ação.',
 
   // page templates create
   // filepath: /routes/admin/authenticated/sidebar/templates-create/page.js
   // routepath: /mobilizations/:mobilization_id/templates/create
-  'page--templates-create.header.title': 'Crie um template a partir da mobilização',
+  'page--templates-create.header.title': 'Copiar template de um BONDE.',
   'page--templates-create.form.name.label': 'Nome do seu template',
   'page--templates-create.form.name.placeholder': 'Pela criação de uma delegacia de desaparecidos',
   'page--templates-create.form.goal.label': 'Descrição',
-  'page--templates-create.form.goal.placeholder': 'Faça um texto curto, capaz de motivar outras pessoas a se unirem à sua mobilização. Você poderá alterar este texto depois.',
+  'page--templates-create.form.goal.placeholder': 'Faça um texto curto e impactante, que chame a galera pra subir no seu BONDE. Você poderá alterar este texto depois.',
 
   // component donation widget settings menu
   // filepath: /client/mobilizations/widgets/__plugins__/donation/components/settings-menu.js
@@ -697,28 +697,28 @@ export default {
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/donation/finish
   'donation.components--settings-menu.title': 'Configure o bloco de doação',
   'donation.components--settings-menu.tabs.adjusts': 'Ajustes',
-  'donation.components--settings-menu.tabs.autofire': 'Mensagem agradecimento',
+  'donation.components--settings-menu.tabs.autofire': 'Mensagem de agradecimento',
   'donation.components--settings-menu.tabs.post-action': 'Pós-doação',
 
   // page donation widget
   // filepath: /routes/admin/authenticated/sidebar/widgets-donation-settings/donation/page.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/donation
-  'page--donation-widget.header.title': 'Crie um template a partir da mobilização',
-  'page--donation-widget.form.submit-button': 'Salvar',
-  'page--donation-widget.form.success-message': 'Formulário de doação configurado com sucesso!',
+  'page--donation-widget.header.title': 'Copiar template de um BONDE',
+  'page--donation-widget.form.submit-button': 'Tudo certo!',
+  'page--donation-widget.form.success-message': 'Pronto!Configuramos seu formulário de doação!',
   'page--donation-widget.form.donation-title.label': 'Título do bloco de doação',
-  'page--donation-widget.form.donation-title.placeholder': 'Ex.: Escolha um valor e contribua agora!',
+  'page--donation-widget.form.donation-title.placeholder': 'Exemplo: Escolha um valor e contribua agora!',
   'page--donation-widget.form.payment-type.label': 'Tipo de doação',
   'page--donation-widget.form.payment-type.unique': 'Única',
   'page--donation-widget.form.payment-type.recurring': 'Recorrente',
   'page--donation-widget.form.payment-type.users-choice': 'Usuário escolhe',
-  'page--donation-widget.form.payment-interval.label': 'Intervalo da recorrência',
-  'page--donation-widget.form.payment-interval.monthly': 'Mensal',
-  'page--donation-widget.form.payment-interval.semiannually': 'Semestral',
-  'page--donation-widget.form.payment-interval.annually': 'Anual',
-  'page--donation-widget.form.main-color.label': 'Defina a cor da página de pagamento',
-  'page--donation-widget.form.main-color.helper-text': 'Selecione a cor no box abaixo ou insira o valor em hex, por exemplo: #DC3DCE.',
-  'page--donation-widget.form.donation-default-value.label': 'Defina os valores para o bloco de doação',
+  'page--donation-widget.form.payment-interval.label': 'Frequência',
+  'page--donation-widget.form.payment-interval.monthly': 'Todo mês',
+  'page--donation-widget.form.payment-interval.semiannually': 'Todo semestre',
+  'page--donation-widget.form.payment-interval.annually': 'Todo ano',
+  'page--donation-widget.form.main-color.label': 'Escolha a cor da página de pagamento',
+  'page--donation-widget.form.main-color.helper-text': 'Selecione a cor no box aqui embaixo ou digite o valor em hex, por exemplo: #DC3DCE.',
+  'page--donation-widget.form.donation-default-value.label': 'Escolha os valores para o bloco de doação',
   'page--donation-widget.form.donation-default-value.helper-text': 'Você pode ter até 5 valores por bloco de doação. Preencha apenas com números inteiros (Ex: 50)',
   'page--donation-widget.form.default-value-01.label': 'Valor 1',
   'page--donation-widget.form.default-value-01.placeholder': 'R$20',
@@ -733,7 +733,7 @@ export default {
   'page--donation-widget.form.default-value.radio.text': 'Default',
   'page--donation-widget.form.default-value.helper-text': '*todos os valores são em reais',
   'page--donation-widget.form.button-text.label': 'Texto do botão de doação',
-  'page--donation-widget.form.button-text.placeholder': 'Ex.: Doe agora!',
+  'page--donation-widget.form.button-text.placeholder': 'Exemplo: Doe agora!',
   'page--donation-widget.form.payment-method.label': 'Habilitar pagamento por boleto?',
   'page--donation-widget.form.payment-method.helper-text': 'Cada boleto pago terá um custo adicional de R$3,00',
   'page--donation-widget.form.payment-method.radio.yes': 'Sim',
@@ -744,8 +744,8 @@ export default {
   // page donation widget (connected)
   // filepath: /routes/admin/authenticated/sidebar/widgets-donation-settings/donation/page.connected.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/donation
-  'page--donation-widget.form.validation.button-text.required': 'Insira o texto do botão',
-  'page--donation-widget.form.validation.button-text.max-length': 'O limite de caracteres foi atingido.',
+  'page--donation-widget.form.validation.button-text.required': 'Crie o texto do botão',
+  'page--donation-widget.form.validation.button-text.max-length': 'opa! Você atingiu olimite de caracteres.',
 
   // component widget autofire
   // filepath: /client/mobilizations/widgets/components/form-autofire.js
@@ -753,17 +753,17 @@ export default {
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/donation/autofire
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/form/autofire
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/pressure/autofire
-  'widgets.components--form-autofire.form.submit-button': 'Salvar',
-  'widgets.components--form-autofire.form.success-message': 'Mensagem de agradecimento configurada com sucesso!',
+  'widgets.components--form-autofire.form.submit-button': 'Tudo certo!',
+  'widgets.components--form-autofire.form.success-message': 'Pronto! Já configuramos sua mensagem de agradecimento!',
   'widgets.components--form-autofire.form.sender-name.label': 'Nome do remetente',
-  'widgets.components--form-autofire.form.sender-name.placeholder': 'Defina o nome que irá aparecer na mensagem enviada.',
-  'widgets.components--form-autofire.form.sender-email.label': 'E-mail remetente',
-  'widgets.components--form-autofire.form.sender-email.placeholder': 'Defina o e-mail que irá aparecer na mensagem enviada.',
-  'widgets.components--form-autofire.form.sender-email.validation.invalid-email-format': 'Informe um e-mail inválido',
-  'widgets.components--form-autofire.form.email-subject.label': 'Assunto do e-mail',
-  'widgets.components--form-autofire.form.email-subject.placeholder': 'Defina o assunto que irá aparecer na mensagem enviada.',
+  'widgets.components--form-autofire.form.sender-name.placeholder': 'Digite o nome que vai aparecer na mensagem enviada.',
+  'widgets.components--form-autofire.form.sender-email.label': 'Email remetente',
+  'widgets.components--form-autofire.form.sender-email.placeholder': 'Digite o email que vai aparecer na mensagem enviada.',
+  'widgets.components--form-autofire.form.sender-email.validation.invalid-email-format': 'Esse email não existe',
+  'widgets.components--form-autofire.form.email-subject.label': 'Assunto do email',
+  'widgets.components--form-autofire.form.email-subject.placeholder': 'Digite o assunto que vai aparecer na mensagem enviada.',
   'widgets.components--form-autofire.form.email-text.label': 'Email de agradecimento',
-  'widgets.components--form-autofire.form.email-text.placeholder': 'Ex: Obrigado por apostar na força da ação coletiva em rede. Sua participação é muito importante e, agora, precisamos da sua ajuda para que mais gente colabore com esta mobilização. Compartilhe nas suas redes clicando em um dos links abaixo. Um abraço.',
+  'widgets.components--form-autofire.form.email-text.placeholder': 'Exemplo: Obrigado por apostar na força da ação coletiva em rede. Sua participação é muito importante e, agora, precisamos da sua ajuda para que mais gente colabore com este BONDE. Compartilhe nas suas redes clicando em um dos links aqui embaixo. Um abraço.',
 
   // component widget form finish message
   // filepath: /client/mobilizations/widgets/components/form-finish-message/index.js
@@ -771,13 +771,13 @@ export default {
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/donation/finish
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/form/finish
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/pressure/finish
-  'widgets.components--form-finish-message.success-message': 'Formulário salvo com sucesso!',
+  'widgets.components--form-finish-message.success-message': 'Salvamos seu formulário!',
   'widgets.components--form-finish-message.type.label': 'Tipo de mensagem',
   'widgets.components--form-finish-message.type.radio.share': 'Compartilhar',
   'widgets.components--form-finish-message.type.radio.custom': 'Customizar',
-  'widgets.components--form-finish-message.type.validation.required': 'Nenhum tipo de mensagem foi selecionado',
+  'widgets.components--form-finish-message.type.validation.required': 'Você não escolheu nenhum tipo de mensagem',
   'widgets.components--form-finish-message.share.whatsapp-text.label': 'Texto do WhatsApp',
-  'widgets.components--form-finish-message.share.whatsapp-text.placeholder': 'Faça um texto curto, capaz de motivar outras pessoas a se unirem à sua mobilização. Você poderá alterar este texto depois.',
+  'widgets.components--form-finish-message.share.whatsapp-text.placeholder': 'Faça um texto curto e impactante, que chame a galera pra subir no seu BONDE. Você poderá alterar este texto depois.',
   'widgets.components--form-finish-message.preview.label': 'Preview',
   'widgets.components--form-finish-message.custom.message.default': 'Clique aqui para editar...',
 
@@ -820,14 +820,14 @@ export default {
   // page donation widget finish
   // filepath: /routes/admin/authenticated/sidebar/widgets-donation-settings/finish/page.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/donation/finish
-  'page--donation-widget-finish.form.success-message': 'Formulário de pós-doação salvo com sucesso!',
+  'page--donation-widget-finish.form.success-message': 'Salvamos seu formulário de pós-doação!',
 
   // component donation widget tell-a-friend
   // filepath: /client/mobilizations/widgets/__plugins__/donation/components/donation-tell-a-friend.js
   // routepath:
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/donation/finish
   //   - (public) /
-  'donation.components--tell-a-friend.message': 'Oba, doação registrada! Sua doação é via boleto? Verifique seu email.',
+  'donation.components--tell-a-friend.message': 'Oba, doação registrada! Sua doação é via boleto? Dá uma olhada no seu email.',
 
   // config mobrender widgets
   // filepath: /client/mobrender/widgets/config.js
@@ -835,10 +835,10 @@ export default {
   'widgets.config--content.label': 'Texto',
   'widgets.config--content.default': 'Clique aqui para editar...',
   'widgets.config--form.label': 'Formulário',
-  'widgets.config--form.default': 'Obrigado por apostar na força da ação coletiva em rede. Sua participação é muito importante e, agora, precisamos da sua ajuda para que mais gente colabore com esta mobilização. Compartilhe nas suas redes clicando em um dos links abaixo.\n\nUm abraço',
+  'widgets.config--form.default': 'Obrigado por apostar na força da ação coletiva em rede. Sua participação é muito importante e, agora, precisamos da sua ajuda para que mais gente colabore com este BONDE. Compartilhe nas suas redes clicando em um dos links aqui embaixo.Um abraço',
   'widgets.config--pressure.label': 'Pressão',
-  'widgets.config--pressure.default.title': 'Envie um e-mail para quem pode tomar essa decisão',
-  'widgets.config--pressure.default.button-text': 'Enviar e-mail',
+  'widgets.config--pressure.default.title': 'Envie um email para quem pode tomar essa decisão',
+  'widgets.config--pressure.default.button-text': 'Enviar email',
   'widgets.config--donation.label': 'Doação',
 
   // component donation widget
@@ -862,45 +862,45 @@ export default {
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/form/export
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/form/fields
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/form/finish
-  'form-widget.components--settings-menu.title': 'Configure o formulário da sua ação',
+  'form-widget.components--settings-menu.title': 'Deixe o formulário da sua ação do seu jeito',
   'form-widget.components--settings-menu.items.fields': 'Campos do formulário',
   'form-widget.components--settings-menu.items.adjusts': 'Ajustes',
-  'form-widget.components--settings-menu.items.autofire': 'Mensagem agradecimento',
+  'form-widget.components--settings-menu.items.autofire': 'Mensagem de agradecimento',
   'form-widget.components--settings-menu.items.report': 'Relatório',
   'form-widget.components--settings-menu.items.post-action': 'Pós-inscrição',
 
   // page form widget
   // filepath: /routes/admin/authenticated/sidebar/widgets-form-settings/form/page.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/form
-  'page--form-widget.form.success-message': 'Formulário configurado com sucesso!',
+  'page--form-widget.form.success-message': 'Pronto! Configuramos o seu formulário!',
   'page--form-widget.form.widget-title.label': 'Título do formulário',
-  'page--form-widget.form.widget-title.placeholder': 'Ex: Preencha o formulário abaixo para assinar a petição.',
+  'page--form-widget.form.widget-title.placeholder': 'Exemplo: Preencha o formulário abaixo para assinar a petição.',
   'page--form-widget.form.button-text.label': 'Botão',
-  'page--form-widget.form.button-text.placeholder': 'Defina o texto do botão de confirmação do formulário.',
+  'page--form-widget.form.button-text.placeholder': 'Digite o texto do botão de confirmação do formulário.',
   'page--form-widget.form.counter-text.label': 'Contador',
-  'page--form-widget.form.counter-text.placeholder': 'Defina o texto que ficará ao lado do número de pessoas que agiram.',
+  'page--form-widget.form.counter-text.placeholder': 'Digite o texto que ficará ao lado do número de pessoas que agiram.',
 
   // component data export
   // filepath: /client/mobilizations/widgets/components/data-export.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/form/export
   'widgets.components--data-export.formated-export-at': '{date} às {time}',
-  'widgets.components--data-export.loading.message': 'Aguarde enquanto estamos processando...',
+  'widgets.components--data-export.loading.message': 'Segura firme, estamos quase lá...',
   'widgets.components--data-export.exported.message': 'Última exportação: {formatedExportAt}.',
   'widgets.components--data-export.export.label': 'Exportar',
-  'widgets.components--data-export.export.helper-text': 'Clique no botão abaixo para baixar o relatório completo do formulário em formato excel.',
+  'widgets.components--data-export.export.helper-text': 'Clique no botão aqui embaixo para baixar o relatório completo do formulário em formato excel.',
   'widgets.components--data-export.export.button': 'Clique para baixar a planilha completa.',
 
   // action async widget data export
   // filepath: /client/mobrender/redux/action-creators/async-widget-data-export.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/form/export
-  'action--async-widget-data-export.no-data': 'Nao foi encontrado nenhum dado para ser exportado',
+  'action--async-widget-data-export.no-data': 'Ah,não! Não encontramos nenhum dado para ser exportado',
 
   // page form widget fields
   // filepath: /routes/admin/authenticated/sidebar/widgets-form-settings/fields/page.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/form/fields
   'page--form-widget-fields.add-button': 'Adicionar um campo',
-  'page--form-widget-fields.helper-text.still-empty': 'Seu formulário ainda não possui nenhum campo. Clique abaixo para começar a adicionar campos.',
-  'page--form-widget-fields.helper-text.manage-fields': 'Adicione, remova, edite e ordene os campos do formulário de acordo com as necessidades da sua ação.',
+  'page--form-widget-fields.helper-text.still-empty': 'Seu formulário ainda não possui nenhum campo. Clique aqui para começar a adicionar campos.',
+  'page--form-widget-fields.helper-text.manage-fields': 'Adicione, remova, edite e ordene os campos do formulário como quiser',
 
   // component form widget
   // filepath: /client/mobilizations/widgets/__plugins__/form/components/__form__.js
@@ -921,15 +921,15 @@ export default {
   // component form widget input form
   // filepath: /client/mobilizations/widgets/__plugins__/form/components/input-form.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/form/fields
-  'form-widget.components--input-form.handle-remove.confirm': 'Você tem certeza que quer remover este campo?',
-  'form-widget.components--input-form.handle-overlay-click.confirm': 'Ao sair sem salvar você perderá suas modificações. Deseja sair sem salvar?',
+  'form-widget.components--input-form.handle-remove.confirm': 'Tem certeza que quer remover este campo?',
+  'form-widget.components--input-form.handle-overlay-click.confirm': 'Opa! Se você sair sem salvar, vai perder as alterações. Quer sair mesmo assim?',
   'form-widget.components--input-form.field-title.label': 'Título do campo',
-  'form-widget.components--input-form.field-title.placeholder': 'Ex: Email',
+  'form-widget.components--input-form.field-title.placeholder': 'Exemplo: Email',
   'form-widget.components--input-form.field-helper-text.label': 'Texto de ajuda',
-  'form-widget.components--input-form.field-helper-text.placeholder': 'Ex: Insira aqui o seu email',
+  'form-widget.components--input-form.field-helper-text.placeholder': 'Exemplo: Digite aqui o seu email',
   'form-widget.components--input-form.field-type.label': 'Tipo de campo',
   'form-widget.components--input-form.field-type.options.text': 'Texto',
-  'form-widget.components--input-form.field-type.options.email': 'E-mail',
+  'form-widget.components--input-form.field-type.options.email': 'Email',
   'form-widget.components--input-form.field-type.options.number': 'Número',
   'form-widget.components--input-form.field-type.options.dropdown': 'Dropdown &#9733;',
   'form-widget.components--input-form.field-type.options.greetings': 'Saudação &#9733;',
@@ -940,8 +940,8 @@ export default {
   'form-widget.components--input-form.button-move-down': 'Mover para baixo',
   'form-widget.components--input-form.button-remove': 'Remover',
   'form-widget.components--input-form.button-cancel': 'Cancelar',
-  'form-widget.components--input-form.button-save.saving': 'Salvando...',
-  'form-widget.components--input-form.button-save.default': 'Salvar',
+  'form-widget.components--input-form.button-save.saving': 'Só mais um pouco...',
+  'form-widget.components--input-form.button-save.default': 'Tudo certo!',
 
   // component mobrender widget overlay
   // filepath: /client/mobrender/components/widget-overlay.js
@@ -952,14 +952,14 @@ export default {
   // page form widget finish
   // filepath: /routes/admin/authenticated/sidebar/widgets-form-settings/finish/page.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/form/finish
-  'page--form-widget-finish.success-message': 'Formulário de pós-inscrição salvo com sucesso!',
+  'page--form-widget-finish.success-message': 'Pronto! Já salvamos seu formulário de pós-inscrição!',
 
   // component form widget tell a friend
   // filepath: /client/mobilizations/widgets/__plugins__/form/components/form-tell-a-friend.js
   // routepath:
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/form/finish
   //   - (public) /
-  'form-widget.components--tell-a-friend.message': 'Formulário submetido com sucesso!',
+  'form-widget.components--tell-a-friend.message': 'Seu formulário foi enviado!',
 
   // component pressure widget settings menu
   // filepath: /client/mobilizations/widgets/__plugins__/pressure/components/settings-menu.js
@@ -970,18 +970,18 @@ export default {
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/pressure/finish
   'pressure-widget.components--settings-menu.title': 'Configure seu formulário de pressão',
   'pressure-widget.components--settings-menu.items.form': 'Formulário',
-  'pressure-widget.components--settings-menu.items.pressure-email': 'E-mail para alvo',
+  'pressure-widget.components--settings-menu.items.pressure-email': 'Email para alvo',
   'pressure-widget.components--settings-menu.items.autofire': 'Mensagem de agradecimento',
   'pressure-widget.components--settings-menu.items.post-action': 'Pós-pressão',
 
   // page pressure widget
   // filepath: /routes/admin/authenticated/sidebar/widgets-pressure-settings/pressure/page.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/pressure
-  'page--pressure-widget.success-message': 'Formulário de pressão configurado com sucesso!',
+  'page--pressure-widget.success-message': 'Pronto! Configuramos seu formulário de pressão!',
   'page--pressure-widget.form.title-text.label': 'Título do formulário',
-  'page--pressure-widget.form.title-text.placeholder': 'Envie um e-mail para quem pode tomar essa decisão',
+  'page--pressure-widget.form.title-text.placeholder': 'Envie um email para quem pode tomar essa decisão',
   'page--pressure-widget.form.button-text.label': 'Texto do botão',
-  'page--pressure-widget.form.button-text.placeholder': 'Enviar e-mail',
+  'page--pressure-widget.form.button-text.placeholder': 'Enviar email',
   'page--pressure-widget.form.main-color.label': 'Cor do formulário',
   'page--pressure-widget.form.show-counter.label': 'Mostrar contador de pressão',
   'page--pressure-widget.form.show-counter.radio.yes.label': 'Sim',
@@ -995,38 +995,38 @@ export default {
   // page pressure widget (connected)
   // filepath: /routes/admin/authenticated/sidebar/widgets-pressure-settings/pressure/page.connected.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/pressure
-  'page--pressure-widget.form.validation.title-text.required': 'Insira um título para o formulário',
-  'page--pressure-widget.form.validation.button-text.required': 'Insira um texto para o botão',
+  'page--pressure-widget.form.validation.title-text.required': 'Crie um título para o formulário',
+  'page--pressure-widget.form.validation.button-text.required': 'Digite um texto para o botão',
 
   // component widgets input tag
   // filepath: /client/mobilizations/widgets/components/input-tag.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/pressure/email
-  'widgets.components--input-tag.helper-text.target-format': '1. Informe nome e email. Ex.: Nome <email@provedor.com>',
-  'widgets.components--input-tag.helper-text.enter-to-add': '2. Pressione <Enter> para adicionar mais alvos.',
+  'widgets.components--input-tag.helper-text.target-format': '1. Escreva o nome e email. Exemplo: Nome <email@provedor.com>',
+  'widgets.components--input-tag.helper-text.enter-to-add': '2. Dê um <Enter> para adicionar mais alvos.',
 
   // page pressure widget email
   // filepath: /routes/admin/authenticated/sidebar/widgets-pressure-settings/email/page.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/pressure/email
-  'page--pressure-widget-email.success-message': 'Email para alvo configurado com sucesso!',
+  'page--pressure-widget-email.success-message': 'Pronto! Já configuramos seu email para alvo',
   'page--pressure-widget-email.form.input-tag.label': 'Alvos',
-  'page--pressure-widget-email.form.input-tag.validation.invalid-target-format': 'Alvo fora do formato padrão. Ex.: Nome do alvo <alvo@provedor.com>',
+  'page--pressure-widget-email.form.input-tag.validation.invalid-target-format': 'Esse formato de alvo não vale!Exemplo: Nome do alvo <alvo@provedor.com>',
   'page--pressure-widget-email.form.email-subject.label': 'Assunto do email',
   'page--pressure-widget-email.form.email-body.label': 'Corpo do email que será enviado',
 
   // page pressure widget email (connected)
   // filepath: /routes/admin/authenticated/sidebar/widgets-pressure-settings/email/page.connected.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/pressure/email
-  'page--pressure-widget-email.form.validation.required': 'Preenchimento obrigatório',
+  'page--pressure-widget-email.form.validation.required': 'Você precia preencher aqui',
 
   // page pressure widget finish
   // filepath: /routes/admin/authenticated/sidebar/widgets-pressure-settings/finish/page.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/pressure/finish
-  'page--pressure-widget-finish.success-message': 'Formulário de pós-pressão salvo com sucesso!',
+  'page--pressure-widget-finish.success-message': 'Pronto! Seu formulário de pós-pressão está salvo.',
 
   // component pressure widget tell a friend
   // filepath: /client/mobilizations/widgets/__plugins__/pressure/components/pressure-tell-a-friend.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/pressure/finish
-  'pressure-widget--tell-a-friend.message': 'Pressão enviada',
+  'pressure-widget--tell-a-friend.message': 'Parabéns! Você enviou sua pressão.',
 
   //
   // page activists management
@@ -1050,12 +1050,12 @@ export default {
   'p--activists-management.content.button.email.text': 'Email',
   'p--activists-management.content.form-tagging.tags.placeholder': 'Digite tags separadas por vírgula',
   'p--activists-management.content.form-tagging.button.text': 'Adicionar etiqueta',
-  'p--activists-management.content.form-tagging.success.message': 'Etiquetas adicionadas com sucesso a {taggedNumber} pessoas',
+  'p--activists-management.content.form-tagging.success.message': 'Você adicionou etiquetas a {taggedNumber} pessoas',
   'p--activists-management.content.form-tagging.success.undo': 'Desfazer',
   'p--activists-management.content.activist-spotlight.title': 'Perfil selecionado',
   'p--activists-management.content.activist-spotlight.email.label': 'Email',
   'p--activists-management.content.activist-spotlight.phone.label': 'Telefone',
-  'p--activists-management.content.activist-spotlight.mobilizations.label': 'Mobilizações',
+  'p--activists-management.content.activist-spotlight.mobilizations.label': 'BONDES',
   'p--activists-management.content.activist-spotlight.tags.label': 'Etiquetas',
   'p--activists-management.content.activist-spotlight.form-tagging.button.text': 'Adicionar',
 
@@ -1063,7 +1063,7 @@ export default {
   // filepath: {incoming-for-v0.6.x release}
   'activists-management.c--filterable-list.activist.placeholder': 'Quem você está procurando?',
 
-  'activists-management.c--filterable-list.suggest.placeholder': 'Filtre por mobilizações ou formulários',
+  'activists-management.c--filterable-list.suggest.placeholder': 'Filtre por BONDES ou por formulários',
   'activists-management.c--filterable-list.suggest.operators.label': 'Operadores',
   'activists-management.c--filterable-list.suggest.operators.options.or.label': 'ou',
   'activists-management.c--filterable-list.suggest.operators.options.and.label': 'e',
