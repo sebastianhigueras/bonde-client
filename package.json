@@ -62,7 +62,7 @@
     "react-helmet": "^3.1.0",
     "react-intl": "^2.2.3",
     "react-redux": "^4.4.0",
-    "react-router": "^2.8.1",
+    "react-router": "^4.1.2",
     "react-s3-uploader": "^3.4.0",
     "react-transition-group": "^1.1.1",
     "reapop": "^1.0.0",
