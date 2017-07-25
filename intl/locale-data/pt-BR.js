@@ -60,7 +60,7 @@ export default {
   'form--subscription-creditcard.form.number.label': 'Número',
   'form--subscription-creditcard.form.number.placeholder': 'Exemplo: 0000 0000 0000 0000',
   'form--subscription-creditcard.form.name.label': 'Nome',
-  'form--subscription-creditcard.form.name.placeholder': '(do jeito que aparece no cartão)',
+  'form--subscription-creditcard.form.name.placeholder': '(do jeitinho que aparece no cartão)',
   'form--subscription-creditcard.form.expiration-date.label': 'Validade',
   'form--subscription-creditcard.form.expiration-date.placeholder': '00/00',
   'form--subscription-creditcard.form.cvv.label': 'CVV',
@@ -71,27 +71,27 @@ export default {
   // form subscription recurring
   // filepath: /client/subscriptions/forms/recurring-form.js
   // routepath: /subscriptions/:id/edit
-  'form--subscription-recurring.helper-text': 'Quer alterar a data de cobrança da sua doação? É só mudar aqui embaixo. O valor da sua doação continuará igual mas, será cobrado em outra data ;)',
+  'form--subscription-recurring.helper-text': 'Quer alterar a data de cobrança da sua doação? É só mudar aqui embaixo. O valor da sua doação continuará igual, só será cobrado na nova data ;)',
   'form--subscription-recurring.form.process-at.label': 'Nova data de cobrança',
   'form--subscription-recurring.form.process-at.placeholder': 'Exemplo: DD/MM/AAAA',
   'form--subscription-recurring.form.submit-button.text': 'Salvar',
   'form--subscription-recurring.form.validation.required': 'Obrigatório',
-  'form--subscription-recurring.form.validation.invalid-date-format': 'Ops!Esse formato de data no existe',
+  'form--subscription-recurring.form.validation.invalid-date-format': 'Ops!Esse formato de data no existe...',
 
   // notifications
   // filepath: /client/utils/notifications.js
   // routepath: /subscriptions/:id/edit
-  'notification--generic-request-error.title': 'Deu ruim!',
-  'notification--generic-request-error.message': 'Não conseguimos salvar seu pedido :(. Conte até dez e tente de novo.',
+  'notification--generic-request-error.title': 'Ih, deu ruim!',
+  'notification--generic-request-error.message': 'Não conseguimos salvar seu pedido :( Conte até dez e tente de novo.',
   'notification--generic-save-success.title': 'Oba!',
-  'notification--generic-save-success.message': 'Salvamos seu pedido! Seus dados já estão alterados.',
+  'notification--generic-save-success.message': 'Salvamos seu pedido! Seus dados já estão alterados :)',
 
   // page community list
   // filepath: /routes/admin/authenticated/external/community-list/page.js
   // routepath: /community
   'page--community-list.title': 'Salve, salve {userFirstName},',
   'page--community-list.subtitle': 'Pegue um BONDE andando',
-  'page--community-list.new': 'Crie um novo BONDE',
+  'page--community-list.new': 'Ou crie um novo BONDE',
 
   // component community settings menu
   // filepath: /client/community/components/settings-menu.js
@@ -106,13 +106,13 @@ export default {
   'community.components--settings-menu.tabs.info': 'Informações',
   'community.components--settings-menu.tabs.mailchimp': 'Mailchimp',
   'community.components--settings-menu.tabs.recipient': 'Recebedor',
-  'community.components--settings-menu.tabs.report': 'Relatório',
+  'community.components--settings-menu.tabs.report': 'Relatórios',
   'community.components--settings-menu.tabs.domains': 'Domínios',
 
   // component community domain preview
   // filepath: /client/community/components/dns/dns-preview/domain-preview.js
   // routepath: /community/domain/add
-  'community.components--domain-preview.li.domain.header': 'Domínio da comunidade',
+  'community.components--domain-preview.li.domain.header': 'Domínio do seu BONDE',
 
   // component community subdomain preview
   // filepath: /client/community/components/dns/dns-preview/subdomain-preview.js
@@ -155,13 +155,13 @@ export default {
   // page community domain create
   // filepath: /routes/admin/authenticated/sidebar/community-settings/domain-create/page.js
   // routepath: /community/domain/add
-  'page--community-domain-create.title': 'Domínio da comunidade',
+  'page--community-domain-create.title': 'Domínio do seu BONDE',
 
-  'page--community-domain-create.step-add.title': 'Crie um endereço pra sua comunidade',
-  'page--community-domain-create.step-add.form.domain-name.label': 'Domínio da sua comunidade',
-  'page--community-domain-create.step-add.form.domain-name.placeholder': 'Exemplo. meubonde.org',
+  'page--community-domain-create.step-add.title': 'Cadastre um domínio pro seu BONDE',
+  'page--community-domain-create.step-add.form.domain-name.label': 'Insira aqui o domínio do BONDE',
+  'page--community-domain-create.step-add.form.domain-name.placeholder': 'Ex. meubonde.org',
   'page--community-domain-create.step-add.form.domain-name.validation.required': 'Você precisa incluir um domínio.',
-  'page--community-domain-create.step-add.form.domain-name.validation.invalid-domain-format': 'Ops!Este domínio já existe',
+  'page--community-domain-create.step-add.form.domain-name.validation.invalid-domain-format': 'Ops! Formato de domínio inválido',
   'page--community-domain-create.step-add.form.button.text': 'Beleza!',
 
   'page--community-domain-create.step-dns-servers.title': 'Altere os servidores do seu provedor DNS',
@@ -171,22 +171,23 @@ export default {
   'page--community-domain-create.step-dns-servers.second-paragraph.servers-name': 'nomes de servidor',
   'page--community-domain-create.step-dns-servers.button.text': 'Beleza!',
 
-  'page--community-domain-create.step-check.title': 'Teste a conexão',
-  'page--community-domain-create.step-check.first-paragraph': 'Clique no botão abaixo e veja se está tudo rolando.',
-  'page--community-domain-create.step-check.second-paragraph': 'Fique ligado: a mudança de DNS pode demorar até 48 horas para ser propagada pela internet.',
+  'page--community-domain-create.step-check.title': 'Teste a sua conexão',
+  'page--community-domain-create.step-check.first-paragraph': 'Clique no botão abaixo e veja se tá tudo rolando.',
+  'page--community-domain-create.step-check.second-paragraph': 'Fique ligado: a alteração de DNS pode demorar até 48 horas para ser propagada pela internet.',
   'page--community-domain-create.step-check.button.text': 'Tudo ok!',
 
   // page community info
   // filepath: /routes/admin/authenticated/sidebar/community-settings/info/page.js
   // routepath: /community/info
   'page--community-info.form.name.label': 'Nome',
-  'page--community-info.form.name.validation.required': 'Qual o nome da sua comunidade?',
-  'page--community-info.form.description.label': 'O que ela causa?',
+  'page--community-info.form.name.validation.required': 'Qual o nome do seu BONDE?',
+  'page--community-info.form.description.label': 'Descrição',
+  'page--community-info.form.description.validation.required': 'Por que esse BONDE existe?',
   'page--community-info.form.city.label': 'Cidade',
-  'page--community-info.form.city.validation.required': 'De qual cidade ela é?',
-  'page--community-info.form.custom-from-email.label': 'Email para respostas',
-  'page--community-info.form.custom-from-email.helper-text': 'O email precisa seguir o formato padrão: Nome do contato <contato@provedor.com>',
-  'page--community-info.form.custom-from-email.validation.invalid-email-format': 'Ops!Esse email de resposta não existe',
+  'page--community-info.form.city.validation.required': 'De qual cidade é o BONDE?',
+  'page--community-info.form.custom-from-email.label': 'Email',
+  'page--community-info.form.custom-from-email.helper-text': 'Esse email vai ser usado como remetente padrão do seu BONDE',
+  'page--community-info.form.custom-from-email.validation.invalid-email-format': 'Ops!Parece que esse email não existe...',
 
   // component settings form
   // filepath: /client/ux/components/settings-form/index.js
@@ -215,19 +216,19 @@ export default {
   // page community mailchimp
   // filepath: /routes/admin/authenticated/sidebar/community-settings/mailchimp/page.js
   // routepath: /community/mailchimp
-  'page--community-mailchimp.form.api-key.label': 'Mailchimp API Key',
-  'page--community-mailchimp.form.list-id.label': 'Mailchimp ID da lista',
-  'page--community-mailchimp.form.group-id.label': 'Mailchimp ID do grupo',
+  'page--community-mailchimp.form.api-key.label': 'API Key',
+  'page--community-mailchimp.form.list-id.label': 'ID da lista',
+  'page--community-mailchimp.form.group-id.label': 'ID do grupo',
 
   // page community new
   // filepath: /routes/admin/authenticated/external/community-new/page.js
   // routepath: /community/new
-  'page--community-new.title': 'Quem é sua comunidade?',
-  'page--community-new.subtitle': 'Comunidades do BONDE são grupos de ação que trabalham juntos por uma causa.',
+  'page--community-new.title': 'Qual é seu BONDE?',
+  'page--community-new.subtitle': 'BONDES são grupos de ação que trabalham juntos mobilizando em torno de causas.',
 
-  'page--community-new.form.name.label': 'Nome da comunidade',
+  'page--community-new.form.name.label': 'Nome desse BONDE',
   'page--community-new.form.name.placeholder': 'Exemplo: Movimento 90º São Paulo',
-  'page--community-new.form.city.label': 'Cidade da comunidade',
+  'page--community-new.form.city.label': 'Cidade do BONDE',
   'page--community-new.form.city.placeholder': 'Exemplo: São Paulo',
   'page--community-new.form.submit-button.text.default': 'Tudo ok!',
   'page--community-new.form.submit-button.text.saving': 'Só mais um pouco...',
@@ -235,18 +236,18 @@ export default {
   // page community new (connected)
   // filepath: /routes/admin/authenticated/external/community-new/page.connected.js
   // routepath: /community/new
-  'page--community-new.form.name.validation.required': 'Qual o nome da sua comunidade?',
-  'page--community-new.form.city.validation.required': 'Qual a cidade da sua comunidade?',
+  'page--community-new.form.name.validation.required': 'Qual o nome do seu BONDE?',
+  'page--community-new.form.city.validation.required': 'Qual a cidade desse BONDE?',
 
   // page community recipient
   // filepath: /routes/admin/authenticated/sidebar/community-settings/recipient/page.js
   // routepath: /community/recipient
-  'page--community-recipient.pagarme-warning': 'Fique ligado: As doações só vão pra rua 31 dias depois do pagamento via cartão de crédito (29 dias corridos + 2 dias úteis) no caso de compras com uma parcela e 2 dias úteis depois de pagar o boleto bancário. Se a compra tiver de 2 a 12 parcelas, o recebimento normal será da seguinte forma: primeira parcela em 31 dias, segunda em 61, terceira em 91, e assim por diante.',
+  'page--community-recipient.pagarme-warning': 'Preencha sua conta bancária abaixo para transferirmos automaticamente as doações recebidas pelo seu BONDE ;) Mas fique ligado: as doações só ficam disponíveis 31 dias depois do pagamento via cartão de crédito (29 dias corridos + 2 dias úteis) no caso de compras com uma parcela e 2 dias úteis depois de pagar o boleto bancário. Se a compra tiver de 2 a 12 parcelas, o recebimento normal será da seguinte forma: primeira parcela em 31 dias, segunda em 61, terceira em 91, e assim por diante.'
 
-  'page--community-recipient.form.transfer-interval.label': 'Intervalo',
+  'page--community-recipient.form.transfer-interval.label': 'Agendamento das transferências',
   'page--community-recipient.form.transfer-interval.value.weekly': 'Toda semana',
   'page--community-recipient.form.transfer-interval.value.monthly': 'Todo mês',
-  'page--community-recipient.form.transfer-day.label': 'Dia de transferência',
+  'page--community-recipient.form.transfer-day.label': 'Dia da transferência',
 
   'page--community-recipient.section--account.header': 'Conta bancária',
   'page--community-recipient.form.bank-code.label': 'Banco',
@@ -266,7 +267,7 @@ export default {
   // routepath: /community/recipient
   'page--community-recipient.form.validation.required': 'Você precisa preecher aqui',
   'page--community-recipient.form.bank-agency.validation.max-length': 'Pode ter no máximo 5 dígitos',
-  'page--community-recipient.form.bank-agency-dv.validation.length': 'Só pode er 1 dígito',
+  'page--community-recipient.form.bank-agency-dv.validation.length': 'Só pode ter 1 dígito',
   'page--community-recipient.form.bank-account.validation.max-length': 'Pode ter no máximo 13 dígitos',
   'page--community-recipient.form.bank-account-dv.validation.max-length': 'Pode ter no máximo 2 caracteres',
   'page--community-recipient.form.bank-document-number.validation.cnpj-length': 'O CNPJ pode ter no máximo 14 dígitos',
@@ -278,15 +279,15 @@ export default {
   // filepath: /routes/admin/authenticated/sidebar/community-settings/report/page.js
   // routepath: /community/report
   'page--community-report.section-button.donation.title': 'RELATÓRIO DE DOAÇÕES',
-  'page--community-report.section-button.donation.helper-text': 'Quer saber tudo o que tá rolando nas doações da comunidade? Clique aqui embaixo.',
+  'page--community-report.section-button.donation.helper-text': 'Quer saber tudo o que tá rolando nas doações do seu BONDE? Clique no botão abaixo.',
   'page--community-report.section-button.donation.text': 'Baixar',
 
   'page--community-report.section-button.actions.title': 'RELATÓRIO DE AÇÕES',
-  'page--community-report.section-button.actions.helper-text': 'Quer saber tudo sobre as ações feitas na comunidade? Clique aqui embaixo.',
+  'page--community-report.section-button.actions.helper-text': 'Quer saber tudo sobre as ações feitas no seu BONDE? Clique no botão abaixo.',
   'page--community-report.section-button.actions.text': 'Baixar',
 
   'page--community-report.section-button.activists.title': 'RELATÓRIO DE ATIVISTAS',
-  'page--community-report.section-button.activists.helper-text': 'Quer saber tudo sobre os ativistas da comunidade? Clique aqui embaixo.',
+  'page--community-report.section-button.activists.helper-text': 'Quer saber tudo sobre os ativistas do seu BONDE? Clique no botão abaixo.',
   'page--community-report.section-button.activists.text': 'Baixar',
 
   // component sidebar
@@ -331,14 +332,14 @@ export default {
   'components.navigation--sidebar.community-settings.item.info': 'Sobre',
   'components.navigation--sidebar.community-settings.item.mailchimp': 'Mailchimp',
   'components.navigation--sidebar.community-settings.item.recipient': 'Recebedor',
-  'components.navigation--sidebar.community-settings.item.report': 'Relatório',
+  'components.navigation--sidebar.community-settings.item.report': 'Relatórios',
   'components.navigation--sidebar.community-settings.item.domains': 'Domínios',
 
   'components.navigation--sidebar.mobilization-settings.item.launch': 'BOTAR BONDE NA RUA',
-  'components.navigation--sidebar.mobilization-settings.item.launched': 'BONDE público',
-  'components.navigation--sidebar.mobilization-settings.item.edit': 'Editar BONDE',
-  'components.navigation--sidebar.mobilization-settings.item.add-block': 'Adicionar conteúdo',
-  'components.navigation--sidebar.mobilization-settings.item.open-at-new-tab': 'Ver em uma nova aba',
+  'components.navigation--sidebar.mobilization-settings.item.launched': 'BONDE já tá na rua!',
+  'components.navigation--sidebar.mobilization-settings.item.edit': 'Editar',
+  'components.navigation--sidebar.mobilization-settings.item.add-block': 'Adicionar bloco de conteúdo',
+  'components.navigation--sidebar.mobilization-settings.item.open-at-new-tab': 'Visualizar',
   'components.navigation--sidebar.mobilization-settings.item.config': 'Configurações',
 
   'components.navigation--sidebar.footer.account': 'Minha Conta',
@@ -389,8 +390,8 @@ export default {
   // filepath: /routes/admin/authenticated/sidebar/mobilizations-list/page.js
   // routepath: /mobilizations
   'page--mobilizations-list.page-header.title': 'Meus BONDES',
-  'page--mobilizations-list.more-menu-action.open': 'Abrir página',
-  'page--mobilizations-list.more-menu-action.create-template': 'Criar template',
+  'page--mobilizations-list.more-menu-action.open': 'Abrir',
+  'page--mobilizations-list.more-menu-action.create-template': 'Transformar em template',
 
   // component mobilizations page header
   // filepath: /client/mobilizations/components/page-header.js
@@ -398,7 +399,7 @@ export default {
   //   - /mobilizations
   //   - /mobilizations/templates/list
   'mobilizations.components--page-header.button.text': 'Novo BONDE',
-  'mobilizations.components--page-header.tabs.actives': 'Ativos',
+  'mobilizations.components--page-header.tabs.actives': 'Todos',
   'mobilizations.components--page-header.tabs.templates': 'Templates',
 
   // component mobilizations list item: name
@@ -426,14 +427,14 @@ export default {
   // routepath:
   //   - /mobilizations
   //   - /mobilizations/templates/list
-  'mobilizations.components--list.items.users.header.text': 'Usuários',
+  'mobilizations.components--list.items.users.header.text': 'Ativistas',
 
   // component mobilizations list item: fund raising
   // filepath: /client/mobilizations/components/list/items/fund-raising.js
   // routepath:
   //   - /mobilizations
   //   - /mobilizations/templates/list
-  'mobilizations.components--list.items.fund-raising.header.text': 'Arrecadações',
+  'mobilizations.components--list.items.fund-raising.header.text': 'Doações',
   'mobilizations.components--list.items.fund-raising.currency': 'R$',
 
   // component mobilizations page tab layout
@@ -451,7 +452,7 @@ export default {
   // filepath: /routes/admin/authenticated/sidebar/mobilizations-new/page.js
   // routepath: /mobilizations/new
   'page--mobilizations-new.title': 'Seu BONDE veio pra causar o quê?',
-  'page--mobilizations-new.footer': 'Fique tranquil@! você pode editar esse texto sempre que quiser.',
+  'page--mobilizations-new.footer': 'Relaxa, você pode editar isso quando quiser.',
 
   // component mobilizations mobilization basics form
   // filepath: /client/mobilizations/components/mobilization-basics-form.js
@@ -459,13 +460,13 @@ export default {
   //   - /mobilizations/new
   //   - /mobilizations/:mobilization_id/basics
   'mobilizations.components--basics-form.name.label': 'Nome',
-  'mobilizations.components--basics-form.name.placeholder': 'Exemplo: Pela criação de uma delegacia de desaparecidos',
-  'mobilizations.components--basics-form.name.validation.required': 'Qual o nome do seu BONDE?',
-  'mobilizations.components--basics-form.name.validation.max-length': 'Seu título tá muito longo!',
+  'mobilizations.components--basics-form.name.placeholder': 'Qual é o nome desse BONDE?',
+  'mobilizations.components--basics-form.name.validation.required': 'Insira o nome',
+  'mobilizations.components--basics-form.name.validation.max-length': 'Seu título tá muito longo :/',
   'mobilizations.components--basics-form.goal.label': 'Causa',
-  'mobilizations.components--basics-form.goal.placeholder': 'Conta pra gente por que a galera deve subir no seu BONDE. Você poderá mudar esse texto depois.',
-  'mobilizations.components--basics-form.goal.validation.required': 'Insira o objetivo do BONDE',
-  'mobilizations.components--basics-form.goal.validation.max-length': 'Ops!Seu limite de caracteres acabou.',
+  'mobilizations.components--basics-form.goal.placeholder': 'Por que esse BONDE existe? O que tá querendo mudar no mundo?',
+  'mobilizations.components--basics-form.goal.validation.required': 'Insira a causa',
+  'mobilizations.components--basics-form.goal.validation.max-length': 'Ops! Texto muito longo :/',
 
   // component control buttons
   // filepath: /client/components/forms/control-buttons.js
@@ -503,18 +504,18 @@ export default {
   // page mobilizations templates choose
   // filepath: /routes/admin/authenticated/sidebar/templates-choose/page.js
   // routepath: /mobilizations/:mobilization_id/templates/choose
-  'page--mobilizations.templates-choose.title': 'Vamos começar?',
+  'page--mobilizations.templates-choose.title': 'Como você quer começar?',
   'page--mobilizations.templates-choose.browsable-list-item.blank': 'Criar BONDE do zero',
-  'page--mobilizations.templates-choose.browsable-list-item.templates-custom': 'Meus templates',
-  'page--mobilizations.templates-choose.browsable-list-item.templates-global': 'Templates globais',
+  'page--mobilizations.templates-choose.browsable-list-item.templates-custom': 'Criar a partir dos meus templates',
+  'page--mobilizations.templates-choose.browsable-list-item.templates-global': 'Criar a partir de templates globais',
 
   // component mobilizations templates selectable list
   // filepath: /client/mobilizations/templates/components/template-selectable-list.js
   // routepath:
   //   - /mobilizations/:mobilization_id/templates/choose/custom
   //   - /mobilizations/:mobilization_id/templates/choose/global
-  'templates.components--selectable-list.filterable-search-bar.placeholder': 'Ache um template',
-  'templates.components--selectable-list.empty-list-text': 'Ai, não! Não existe nenhum template com esse nome',
+  'templates.components--selectable-list.filterable-search-bar.placeholder': 'Encontre um template',
+  'templates.components--selectable-list.empty-list-text': 'Ai, não! Não existe nenhum template com esse nome :/',
   'templates.components--selectable-list.button.back': 'Voltar',
   'templates.components--selectable-list.button.next': 'Beleza!',
 
