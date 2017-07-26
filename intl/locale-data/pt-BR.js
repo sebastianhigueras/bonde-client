@@ -536,7 +536,7 @@ export default {
   //   - /mobilizations/:mobilization_id/basics
   //   - /mobilizations/:mobilization_id/customDomain
   //   - /mobilizations/:mobilization_id/sharing
-  'mobilizations.components--settings-menu.title': 'Tune o seu BONDE',
+  'mobilizations.components--settings-menu.title': 'Configure este BONDE',
   'mobilizations.components--settings-menu.tabs.info': 'O básico',
   'mobilizations.components--settings-menu.tabs.sharing': 'Compartilhamento',
   'mobilizations.components--settings-menu.tabs.domain': 'Domínio',
@@ -544,11 +544,11 @@ export default {
   // page mobilizations settings analytics
   // filepath: /routes/admin/authenticated/sidebar/mobilizations-settings-analytics/page.js
   // routepath: /mobilizations/:mobilization_id/analytics
-  'page--mobilizations-analytics.first-paragraph': 'Quer ver de perto os resultados do seu BONDE? É só configurar uma conta no Google Analytics :).',
+  'page--mobilizations-analytics.first-paragraph': 'Quer analisar mais a fundo os resultados do seu BONDE? É só configurar uma conta no Google Analytics :).',
   'page--mobilizations-analytics.second-paragraph': 'Saca só:',
-  'page--mobilizations-analytics.ol.create-analytics-account': ' Crie uma conta no Google Analytics {link}',
+  'page--mobilizations-analytics.ol.create-analytics-account': ' Se ainda não tem, crie uma conta no Google Analytics {link}',
   'page--mobilizations-analytics.ol.create-analytics-account.link': 'clicando aqui',
-  'page--mobilizations-analytics.ol.keep-up-with': 'Pegue sua ID de acompanhamento no Google Analytics. Ela é um código que começa sempre com as letras UA e que você encontra depois de criar sua conta lá.',
+  'page--mobilizations-analytics.ol.keep-up-with': 'Encontre sua ID de acompanhamento no Google Analytics - ela é um código que começa sempre com as letras "UA".',
   'page--mobilizations-analytics.ol.paste-ga-code': 'Copie a ID de acompanhamento e cole no campo abaixo:',
   'page--mobilizations-analytics.ol.form.ga-code.label': 'ID do Google Analytics',
   'page--mobilizations-analytics.ol.done': 'Pronto! Você já pode acompanhar as estatísticas do seu BONDE no Google Analytics!',
@@ -562,25 +562,25 @@ export default {
   // filepath: /routes/admin/authenticated/sidebar/blocks-create/page.js
   // routepath: /mobilizations/:mobilization_id/blocks/create
   'page--block-create.title': 'Adicionar bloco de conteúdo',
-  'page--block-create.tabs.blank-blocks': 'Blocos em branco',
-  'page--block-create.helper-text': 'Os blocos vão entrar no fim da sua página, mas você pode trocá-los de ordem sempre que quiser',
-  'page--block-create.type.label': 'Tipo de bloco',
-  'page--block-create.background.label': 'Fundo',
-  'page--block-create.background.image.placeholder.text': 'Escolha uma imagem de fundo',
-  'page--block-create.button-add.text': 'Quero essa',
+  'page--block-create.tabs.blank-blocks': 'Customizando o bloco',
+  'page--block-create.helper-text': 'Quando adicionar um novo bloco, ele vai sempre entrar no fim do seu BONDE, mas você pode trocá-lo de ordem sempre que quiser',
+  'page--block-create.type.label': 'Layout do bloco',
+  'page--block-create.background.label': 'Fundo do bloco',
+  'page--block-create.background.image.placeholder.text': 'Se quiser, pode usar uma imagem como fundo :)',
+  'page--block-create.button-add.text': 'Escolher imagem ',
 
   // page mobilizations domain
   // filepath: /routes/admin/authenticated/sidebar/mobilizations-settings-domain/page.js
   // routepath: /mobilizations/:mobilization_id/customDomain
-  'page--mobilizations-domain.form-domain.success-message': 'Oba! Já salvamos os dados do seu domínio',
+  'page--mobilizations-domain.form-domain.success-message': 'Oba! Já salvamos os dados do seu domínio :)',
 
     // component mobilizations form domain
   // filepath: /client/mobilizations/components/form-domain.js
   // routepath:
   //   - /mobilizations/:mobilization_id/customDomain
   //   - /mobilizations/:mobilization_id/launch
-  'mobilizations.components--form-domain.basic.header-toggle.use-existing-domain': 'Quero usar o domínio principal da minha comunidade',
-  'mobilizations.components--form-domain.basic.header-toggle.create-domain': 'Quero cadastrar um domínio principal na minha comunidade',
+  'mobilizations.components--form-domain.basic.header-toggle.use-existing-domain': 'Quero usar o domínio principal do meu BONDE',
+  'mobilizations.components--form-domain.basic.header-toggle.create-domain': 'Quero cadastrar um domínio principal no meu BONDE',
   'mobilizations.components--form-domain.basic.helper-text': 'Digite aqui embaixo o subdomínio e escolha um domínio para o seu BONDE',
   'mobilizations.components--form-domain.basic.form.subdomain.label': 'Subdomínio',
   'mobilizations.components--form-domain.basic.form.subdomain.placeholder': 'nomedamob',
