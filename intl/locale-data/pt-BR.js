@@ -636,30 +636,30 @@ export default {
   // routepath:
   //   - /mobilizations/:mobilization_id/launch
   //   - /mobilizations/:mobilization_id/sharing
-  'mobilizations.components--form-share.facebook.title': 'Compartilhamento no Facebook',
-  'mobilizations.components--form-share.facebook.helper-text': 'Deixe o post de Facebook do seu BONDE com a sua cara. Pra ele chegar causando, os textos precisam ser impactantes e curtos, para não aparecerem cortados. :)',
+  'mobilizations.components--form-share.facebook.title': 'Compartilhamento',
+  'mobilizations.components--form-share.facebook.helper-text': 'Deixe o link do seu BONDE com a sua cara. Pra ele chegar causando, os textos precisam ser impactantes e curtos, para não aparecerem cortados :)',
   'mobilizations.components--form-share.facebook.form.share-image.label': 'Imagem',
-  'mobilizations.components--form-share.facebook.form.share-title.label': 'Título do post',
+  'mobilizations.components--form-share.facebook.form.share-title.label': 'Título',
   'mobilizations.components--form-share.facebook.form.share-title.placeholder': 'Um título forte que apresente o seu BONDE',
-  'mobilizations.components--form-share.facebook.form.share-description.label': 'Subtítulo do post',
-  'mobilizations.components--form-share.facebook.form.share-description.placeholder': 'Complete a ideia do título e convide a galera pro seu BONDE',
+  'mobilizations.components--form-share.facebook.form.share-description.label': 'Subtítulo',
+  'mobilizations.components--form-share.facebook.form.share-description.placeholder': 'Complete a ideia do título e convide a galera a agir no seu BONDE',
 
-  'mobilizations.components--form-share.twitter.title': 'Compartilhamento no Twitter',
+  'mobilizations.components--form-share.twitter.title': 'Twitter',
   'mobilizations.components--form-share.twitter.helper-text': 'Deixe o tweet do seu BONDE com a sua cara. Toda vez que alguém twittar seu conteúdo, é desse jeito que ele vai pra timeline :)
   'mobilizations.components--form-share.twitter.form.share-text.label': 'Texto do Tweet',
-  'mobilizations.components--form-share.twitter.form.share-text.placeholder': 'Crie uma frase e convide a galera pro seu BONDE',
+  'mobilizations.components--form-share.twitter.form.share-text.placeholder': 'Crie uma frase e convide a galera a agir no seu BONDE',
 
   // page mobilizations launch
   // filepath: /routes/admin/authenticated/sidebar/mobilizations-launch/page.js
   // routepath: /mobilizations/:mobilization_id/launch
   'page--mobilizations-launch.title': 'Colocando seu BONDE na rua',
-  'page--mobilizations-launch.steps.form-domain.title': 'Configure o endereço o BONDE',
+  'page--mobilizations-launch.steps.form-domain.title': 'Configure o endereço do BONDE',
   'page--mobilizations-launch.steps.form-share.title': 'Configure as informações de compartilhamento',
-  'page--mobilizations-launch.steps.done.title': 'Seu BONDE está pronto!',
-  'page--mobilizations-launch.steps.done.helper-text': 'Em uma nova aba, digite o endereço do seu BONDE e veja se ele já está no ar. Se ainda não estiver, dá uma olhada se cadastrou os domínios corretamente. Tudo certo? Então é só esperar ele propagar pela internet!',
-  'page--mobilizations-launch.steps.done.button.open': 'Ver seu BONDE',
+  'page--mobilizations-launch.steps.done.title': 'Seu BONDE está na rua!',
+  'page--mobilizations-launch.steps.done.helper-text': 'Em uma nova aba, digite o endereço do seu BONDE e veja se ele já está na rua. Se ainda não estiver, dá uma olhada se cadastrou os domínios corretamente. Tudo certo? Então é só esperar ele propagar pela internet!',
+  'page--mobilizations-launch.steps.done.button.open': 'Visualizar seu BONDE',
   'page--mobilizations-launch.button.saving': 'Só mais um pouco...',
-  'page--mobilizations-launch.button.launch': 'Subir BONDE',
+  'page--mobilizations-launch.button.launch': 'Lançar BONDE',
   'page--mobilizations-launch.button.next': 'Tudo certo!',
   'page--mobilizations-launch.form-share.validation.required': 'Obrigatório',
 
@@ -668,8 +668,8 @@ export default {
   // routepath: /mobilizations/:mobilization_id/launch/end
   'page--mobilizations-launch-end.heading.all-done': 'Tudo pronto?',
   'page--mobilizations-launch-end.heading.just-launch': 'Agora é só botar ele na rua e contar pra todo mundo!',
-  'page--mobilizations-launch-end.title': 'Chegou a hora',
-  'page--mobilizations-launch-end.button': 'Subir BONDE',
+  'page--mobilizations-launch-end.title': 'Chegou a hora!',
+  'page--mobilizations-launch-end.button': 'Lançar BONDE',
 
   // page templates list
   // filepath: /routes/admin/authenticated/sidebar/templates-list/page.js
@@ -678,17 +678,17 @@ export default {
   'page--templates-list.empty-list.no-template': 'Nenhum template criado.',
   'page--templates-list.empty-list.create-one': 'Copiar template de um BONDE.',
   'page--templates-list.empty-list.mobilization-list': 'Meus BONDES',
-  'page--templates-list.more-menu-action.remove.text': 'Remover',
+  'page--templates-list.more-menu-action.remove.text': 'Remover template',
   'page--templates-list.more-menu-action.remove.confirm': 'Tem certeza que deseja remover este template? Se você confirmar, não vai conseguir mais desfazer a ação.',
 
   // page templates create
   // filepath: /routes/admin/authenticated/sidebar/templates-create/page.js
   // routepath: /mobilizations/:mobilization_id/templates/create
-  'page--templates-create.header.title': 'Copiar template de um BONDE.',
+  'page--templates-create.header.title': 'Criar novo template deste BONDE.',
   'page--templates-create.form.name.label': 'Nome do seu template',
-  'page--templates-create.form.name.placeholder': 'Pela criação de uma delegacia de desaparecidos',
+  'page--templates-create.form.name.placeholder': 'É assim que ele vai aparecer na lista de templates',
   'page--templates-create.form.goal.label': 'Descrição',
-  'page--templates-create.form.goal.placeholder': 'Faça um texto curto e impactante, que chame a galera pra subir no seu BONDE. Você poderá alterar este texto depois.',
+  'page--templates-create.form.goal.placeholder': 'Qual é o objetivo desse BONDE?',
 
   // component donation widget settings menu
   // filepath: /client/mobilizations/widgets/__plugins__/donation/components/settings-menu.js
@@ -696,7 +696,7 @@ export default {
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/donation
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/donation/autofire
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/donation/finish
-  'donation.components--settings-menu.title': 'Configure o bloco de doação',
+  'donation.components--settings-menu.title': 'Personalize seu formulário de doação',
   'donation.components--settings-menu.tabs.adjusts': 'Ajustes',
   'donation.components--settings-menu.tabs.autofire': 'Mensagem de agradecimento',
   'donation.components--settings-menu.tabs.post-action': 'Pós-doação',
@@ -706,9 +706,9 @@ export default {
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/donation
   'page--donation-widget.header.title': 'Copiar template de um BONDE',
   'page--donation-widget.form.submit-button': 'Tudo certo!',
-  'page--donation-widget.form.success-message': 'Pronto!Configuramos seu formulário de doação!',
-  'page--donation-widget.form.donation-title.label': 'Título do bloco de doação',
-  'page--donation-widget.form.donation-title.placeholder': 'Exemplo: Escolha um valor e contribua agora!',
+  'page--donation-widget.form.success-message': 'Pronto! Seu formulário de doação está configurado :)',
+  'page--donation-widget.form.donation-title.label': 'Título do formulário de doação',
+  'page--donation-widget.form.donation-title.placeholder': 'Exemplo: Apoie esta causa!',
   'page--donation-widget.form.payment-type.label': 'Tipo de doação',
   'page--donation-widget.form.payment-type.unique': 'Única',
   'page--donation-widget.form.payment-type.recurring': 'Recorrente',
@@ -717,10 +717,10 @@ export default {
   'page--donation-widget.form.payment-interval.monthly': 'Todo mês',
   'page--donation-widget.form.payment-interval.semiannually': 'Todo semestre',
   'page--donation-widget.form.payment-interval.annually': 'Todo ano',
-  'page--donation-widget.form.main-color.label': 'Escolha a cor da página de pagamento',
-  'page--donation-widget.form.main-color.helper-text': 'Selecione a cor no box aqui embaixo ou digite o valor em hex, por exemplo: #DC3DCE.',
-  'page--donation-widget.form.donation-default-value.label': 'Escolha os valores para o bloco de doação',
-  'page--donation-widget.form.donation-default-value.helper-text': 'Você pode ter até 5 valores por bloco de doação. Preencha apenas com números inteiros (Ex: 50)',
+  'page--donation-widget.form.main-color.label': 'Escolha a cor do formulário de doação',
+  'page--donation-widget.form.main-color.helper-text': 'Selecione a cor na caixa abaixo ou digite o código em hex. (Por exemplo: #DC3DCE)',
+  'page--donation-widget.form.donation-default-value.label': 'Escolha os valores para as doações',
+  'page--donation-widget.form.donation-default-value.helper-text': 'Você pode ter até 5 valores por formulário de doação. Preencha apenas com números inteiros (Ex: 50)',
   'page--donation-widget.form.default-value-01.label': 'Valor 1',
   'page--donation-widget.form.default-value-01.placeholder': 'R$20',
   'page--donation-widget.form.default-value-02.label': 'Valor 2',
@@ -734,13 +734,13 @@ export default {
   'page--donation-widget.form.default-value.radio.text': 'Default',
   'page--donation-widget.form.default-value.helper-text': '*todos os valores são em reais',
   'page--donation-widget.form.button-text.label': 'Texto do botão de doação',
-  'page--donation-widget.form.button-text.placeholder': 'Exemplo: Doe agora!',
+  'page--donation-widget.form.button-text.placeholder': 'Exemplo: Doar agora!',
   'page--donation-widget.form.payment-method.label': 'Habilitar pagamento por boleto?',
   'page--donation-widget.form.payment-method.helper-text': 'Cada boleto pago terá um custo adicional de R$3,00',
   'page--donation-widget.form.payment-method.radio.yes': 'Sim',
   'page--donation-widget.form.payment-method.radio.no': 'Não',
   'page--donation-widget.form.bank-account.label': 'Conta bancária',
-  'page--donation-widget.form.bank-account.helper-text': 'Este bloco de doação está associado à conta correspondente da cidade no Pagar.me.',
+  'page--donation-widget.form.bank-account.helper-text': 'Este formulário de doação está associado à conta cadastrada nessa comunidade. Se ainda não cadastrou, vá nas configurações da comunidade em',
 
   // page donation widget (connected)
   // filepath: /routes/admin/authenticated/sidebar/widgets-donation-settings/donation/page.connected.js
