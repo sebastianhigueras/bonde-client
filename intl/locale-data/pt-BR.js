@@ -740,13 +740,13 @@ export default {
   'page--donation-widget.form.payment-method.radio.yes': 'Sim',
   'page--donation-widget.form.payment-method.radio.no': 'Não',
   'page--donation-widget.form.bank-account.label': 'Conta bancária',
-  'page--donation-widget.form.bank-account.helper-text': 'Este formulário de doação está associado à conta cadastrada nessa comunidade. Se ainda não cadastrou, vá nas configurações da comunidade em',
+  'page--donation-widget.form.bank-account.helper-text': 'Este formulário de doação está associado à conta cadastrada nessa comunidade. Se ainda não cadastrou, vá nas configurações da comunidade em "recebedor" e insira ali os dados. As doações serão transferidas para a conta escolhida ;)',
 
   // page donation widget (connected)
   // filepath: /routes/admin/authenticated/sidebar/widgets-donation-settings/donation/page.connected.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/donation
-  'page--donation-widget.form.validation.button-text.required': 'Crie o texto do botão',
-  'page--donation-widget.form.validation.button-text.max-length': 'opa! Você atingiu olimite de caracteres.',
+  'page--donation-widget.form.validation.button-text.required': 'Insira o texto do botão',
+  'page--donation-widget.form.validation.button-text.max-length': 'Opa! Você atingiu o limite de caracteres...',
 
   // component widget autofire
   // filepath: /client/mobilizations/widgets/components/form-autofire.js
@@ -755,16 +755,16 @@ export default {
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/form/autofire
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/pressure/autofire
   'widgets.components--form-autofire.form.submit-button': 'Tudo certo!',
-  'widgets.components--form-autofire.form.success-message': 'Pronto! Já configuramos sua mensagem de agradecimento!',
+  'widgets.components--form-autofire.form.success-message': 'Pronto! Sua mensagem de agradecimento foi configurada :)',
   'widgets.components--form-autofire.form.sender-name.label': 'Nome do remetente',
   'widgets.components--form-autofire.form.sender-name.placeholder': 'Digite o nome que vai aparecer na mensagem enviada.',
-  'widgets.components--form-autofire.form.sender-email.label': 'Email remetente',
-  'widgets.components--form-autofire.form.sender-email.placeholder': 'Digite o email que vai aparecer na mensagem enviada.',
-  'widgets.components--form-autofire.form.sender-email.validation.invalid-email-format': 'Esse email não existe',
+  'widgets.components--form-autofire.form.sender-email.label': 'Email do remetente',
+  'widgets.components--form-autofire.form.sender-email.placeholder': 'Digite o email do qual a mensagem será enviada.',
+  'widgets.components--form-autofire.form.sender-email.validation.invalid-email-format': 'Ops! Esse email não existe :/',
   'widgets.components--form-autofire.form.email-subject.label': 'Assunto do email',
-  'widgets.components--form-autofire.form.email-subject.placeholder': 'Digite o assunto que vai aparecer na mensagem enviada.',
-  'widgets.components--form-autofire.form.email-text.label': 'Email de agradecimento',
-  'widgets.components--form-autofire.form.email-text.placeholder': 'Exemplo: Obrigado por apostar na força da ação coletiva em rede. Sua participação é muito importante e, agora, precisamos da sua ajuda para que mais gente colabore com este BONDE. Compartilhe nas suas redes clicando em um dos links aqui embaixo. Um abraço.',
+  'widgets.components--form-autofire.form.email-subject.placeholder': 'Digite o assunto da mensagem de agradecimento.',
+  'widgets.components--form-autofire.form.email-text.label': 'Corpo do email',
+  'widgets.components--form-autofire.form.email-text.placeholder': 'Exemplo: Obrigado por apostar na força da ação coletiva em rede. Sua participação é muito importante e, agora, precisamos da sua ajuda para que mais gente colabore com este BONDE. Compartilhe nas suas redes clicando em um dos links aqui embaixo. Um abraço :)',
 
   // component widget form finish message
   // filepath: /client/mobilizations/widgets/components/form-finish-message/index.js
@@ -772,13 +772,13 @@ export default {
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/donation/finish
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/form/finish
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/pressure/finish
-  'widgets.components--form-finish-message.success-message': 'Salvamos seu formulário!',
-  'widgets.components--form-finish-message.type.label': 'Tipo de mensagem',
-  'widgets.components--form-finish-message.type.radio.share': 'Compartilhar',
-  'widgets.components--form-finish-message.type.radio.custom': 'Customizar',
-  'widgets.components--form-finish-message.type.validation.required': 'Você não escolheu nenhum tipo de mensagem',
-  'widgets.components--form-finish-message.share.whatsapp-text.label': 'Texto do WhatsApp',
-  'widgets.components--form-finish-message.share.whatsapp-text.placeholder': 'Faça um texto curto e impactante, que chame a galera pra subir no seu BONDE. Você poderá alterar este texto depois.',
+  'widgets.components--form-finish-message.success-message': 'Pronto! Seu formulário está salvo :)',
+  'widgets.components--form-finish-message.type.label': 'Tipo de conteúdo',
+  'widgets.components--form-finish-message.type.radio.share': 'Compartilhamento',
+  'widgets.components--form-finish-message.type.radio.custom': 'Customizado',
+  'widgets.components--form-finish-message.type.validation.required': 'Você não escolheu nenhum tipo de conteúdo...',
+  'widgets.components--form-finish-message.share.whatsapp-text.label': 'Compartilhamento no WhatsApp',
+  'widgets.components--form-finish-message.share.whatsapp-text.placeholder': 'Faça um texto curto e impactante, que chame a galera pra subir no seu BONDE. Você poderá alterar este texto depois ;)',
   'widgets.components--form-finish-message.preview.label': 'Preview',
   'widgets.components--form-finish-message.custom.message.default': 'Clique aqui para editar...',
 
@@ -789,7 +789,7 @@ export default {
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/form/finish
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/pressure/finish
   //   - (public) /
-  'share.components--tell-a-friend.text': 'Agora, compartilhe com seus amigos!',
+  'share.components--tell-a-friend.text': 'Agora, compartilhe com a sua galera!',
 
   // component share facebook-share-button
   // filepath: /client/components/share/facebook-share-button.js
@@ -821,19 +821,19 @@ export default {
   // page donation widget finish
   // filepath: /routes/admin/authenticated/sidebar/widgets-donation-settings/finish/page.js
   // routepath: /mobilizations/:mobilization_id/widgets/:widget_id/donation/finish
-  'page--donation-widget-finish.form.success-message': 'Salvamos seu formulário de pós-doação!',
+  'page--donation-widget-finish.form.success-message': 'Sua configuração de pós-doação foi salva!',
 
   // component donation widget tell-a-friend
   // filepath: /client/mobilizations/widgets/__plugins__/donation/components/donation-tell-a-friend.js
   // routepath:
   //   - /mobilizations/:mobilization_id/widgets/:widget_id/donation/finish
   //   - (public) /
-  'donation.components--tell-a-friend.message': 'Oba, doação registrada! Sua doação é via boleto? Dá uma olhada no seu email.',
+  'donation.components--tell-a-friend.message': 'Oba, doação registrada! Se sua doação foi por boleto, dá uma olhada no seu email para seguir.',
 
   // config mobrender widgets
   // filepath: /client/mobrender/widgets/config.js
   // routepath: /mobilizations/:mobilization_id/edit
-  'widgets.config--content.label': 'Texto',
+  'widgets.config--content.label': 'Conteúdo',
   'widgets.config--content.default': 'Clique aqui para editar...',
   'widgets.config--form.label': 'Formulário',
   'widgets.config--form.default': 'Obrigado por apostar na força da ação coletiva em rede. Sua participação é muito importante e, agora, precisamos da sua ajuda para que mais gente colabore com este BONDE. Compartilhe nas suas redes clicando em um dos links aqui embaixo.Um abraço',
