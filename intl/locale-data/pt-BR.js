@@ -7,27 +7,27 @@ export default {
   'page--account-login.placeholder.email': 'meu@email.com',
   'page--account-login.loading': 'Estamos quase lá...',
   'page--account-login.signin': 'QUERO ENTRAR',
-  'page--account-login.ask-register': 'Quer subir no BONDE?',
-  'page--account-login.cta-signup': 'Clique e pegue o seu lugar.',
+  'page--account-login.ask-register': 'Quer entrar no BONDE?',
+  'page--account-login.cta-signup': 'Ainda não se cadastrou? Clique aqui para pegar o seu lugar.',
 
   // page account register
   // filepath: /routes/admin/not-authenticated/account-register/page.js
   // routepath: /register
   'page--account-register.title': 'Chega mais que o BONDE é seu.',
   'page--account-register.form.name.label': 'Nome',
-  'page--account-register.form.name.placeholder': 'Meu nome',
+  'page--account-register.form.name.placeholder': 'Seu nome',
   'page--account-register.form.name.validation.required': 'Qual o seu nome?',
   'page--account-register.form.lastname.label': 'Sobrenome',
-  'page--account-register.form.lastname.placeholder': 'Meu Sobrenome',
+  'page--account-register.form.lastname.placeholder': 'Seu sobrenome',
   'page--account-register.form.email.label': 'Email',
   'page--account-register.form.email.placeholder': 'meu@email.com.br',
   'page--account-register.form.email.validation.required': 'Qual o seu email?',
-  'page--account-register.form.email.validation.invalid-email-format': 'Ops!Esse email não existe...',
+  'page--account-register.form.email.validation.invalid-email-format': 'Ops! Esse email não existe...',
   'page--account-register.form.password.label': 'Senha',
   'page--account-register.form.password.label.validation.required': 'Crie uma senha só sua',
   'page--account-register.form.password.label.validation.min-length': 'Sua senha precisa ter no minímo 8 caracteres.',
   'page--account-register.form.password-confirm.label': 'Confirme sua senha',
-  'page--account-register.form.password-confirm.label.validation.match': 'Ops!Essa senha não confere...',
+  'page--account-register.form.password-confirm.label.validation.match': 'Ops! Essa senha não confere...',
   'page--account-register.form.submit-button.default': 'Beleza!',
   'page--account-register.form.submit-button.saving': 'Só mais um pouco...',
 
@@ -90,8 +90,8 @@ export default {
   // filepath: /routes/admin/authenticated/external/community-list/page.js
   // routepath: /community
   'page--community-list.title': 'Salve, salve {userFirstName},',
-  'page--community-list.subtitle': 'Pegue um BONDE andando',
-  'page--community-list.new': 'Ou crie um novo BONDE',
+  'page--community-list.subtitle': 'Escolha uma das suas comunidades',
+  'page--community-list.new': 'Ou clique aqui para criar uma nova comunidade :)',
 
   // component community settings menu
   // filepath: /client/community/components/settings-menu.js
@@ -102,17 +102,17 @@ export default {
   //   - /community/mailchimp
   //   - /community/recipient
   //   - /community/report
-  'community.components--settings-menu.title': 'Configurações do BONDE',
+  'community.components--settings-menu.title': 'Configurações da Comunidade',
   'community.components--settings-menu.tabs.info': 'Informações',
   'community.components--settings-menu.tabs.mailchimp': 'Mailchimp',
-  'community.components--settings-menu.tabs.recipient': 'Recebedor',
+  'community.components--settings-menu.tabs.recipient': 'Conta Bancária',
   'community.components--settings-menu.tabs.report': 'Relatórios',
   'community.components--settings-menu.tabs.domains': 'Domínios',
 
   // component community domain preview
   // filepath: /client/community/components/dns/dns-preview/domain-preview.js
   // routepath: /community/domain/add
-  'community.components--domain-preview.li.domain.header': 'Domínio do seu BONDE',
+  'community.components--domain-preview.li.domain.header': 'Domínio da sua comunidade',
 
   // component community subdomain preview
   // filepath: /client/community/components/dns/dns-preview/subdomain-preview.js
