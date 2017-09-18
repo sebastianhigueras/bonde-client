@@ -72,13 +72,19 @@ class EditorSlate extends Component {
 
     const initialState = Raw.deserialize(value, { terse: true })
 
+    const toolbarStaticStyles = this.props.staticToolbar ? {
+      display: 'block',
+      position: 'relative'
+    } : {}
+
     return (
       <div className='widgets--content-plugin'>
         <SlateEditor plugins={plugins} initialState={initialState} style={{ color: '#fff' }}>
           <SlateToolbar style={{
             ...styles.toolbar,
             display: this.state.editing ? 'block' : 'none',
-            ...toolbarStyles
+            ...toolbarStyles,
+            ...toolbarStaticStyles
           }}>
             <BoldButton className={classNames.button} />
             <ItalicButton className={classNames.button} />
