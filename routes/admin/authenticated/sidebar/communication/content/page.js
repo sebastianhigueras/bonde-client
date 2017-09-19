@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Raw } from 'slate'
+import { FormattedMessage, intlShape } from 'react-intl'
 import {
   FormGroup,
   ControlLabel,
@@ -20,7 +21,7 @@ class EditorInput extends React.Component {
     return (
       <EditorSlate
         content={value || ''}
-        btnSaveLabel='Salvar rascunho'
+        btnSaveLabel={this.props.buttonText}
         handleSave={(state) => {
           const raw = JSON.stringify(Raw.serialize(state))
           if (value !== raw) onChange(raw)
@@ -42,30 +43,69 @@ EditorInput.contextTypes = {
   $formGroup: PropTypes.object
 }
 
-export default ({
+const Page = ({
   fields: { name, subject, sender, content },
+  intl,
   ...formProps
 }) => (
   <SettingsForm {...formProps}>
     <FormGroup controlId='nameId' {...name}>
-      <ControlLabel>Nome da campanha</ControlLabel>
-      <FormControl placeholder='Pela criação de uma delegacia de desaparecidos' />
+      <ControlLabel>
+        <FormattedMessage
+          id='page--communication.form.name.label'
+          defaultMessage='Nome da campanha'
+        />
+      </ControlLabel>
+      <FormControl
+        placeholder={intl.formatMessage({
+          id: 'page--communication.form.name.placeholder',
+          defaultMessage: 'Pela criação de uma delegacia de desaparecidos'
+        })}
+      />
     </FormGroup>
     <FormGroup controlId='subjectId' {...subject}>
-      <ControlLabel maxLength={140}>Assunto do email</ControlLabel>
+      <ControlLabel maxLength={140}>
+        <FormattedMessage
+          id='page--communication.form.subject.label'
+          defaultMessage='Assunto do email'
+        />
+      </ControlLabel>
       <FormControl
-        placeholder={'Faça um texto curto capaz'+
-        ' de motivar outras pessoas a se unirem a sua'}
+        placeholder={intl.formatMessage({
+          id: 'page--communication.form.subject.placeholder',
+          defaultMessage: 'Faça um texto curto capaz'+
+          ' de motivar outras pessoas a se unirem a sua'
+        })}
       />
     </FormGroup>
     <FormGroup controlId='senderId' {...sender}>
-      <ControlLabel>Remetente</ControlLabel>
-      <FormControl placeholder='Remetente' />
+      <ControlLabel>
+        <FormattedMessage
+          id='page--communication.form.sender.label'
+          defaultMessage='Remetente'
+        />
+      </ControlLabel>
+      <FormControl
+        placeholder={intl.formatMessage({
+          id: 'page--communication.form.sender.placeholder',
+          defaultMessage: 'Remetente'
+        })}
+      />
       <HelpBlock>{'Ex.: Nome <email@provedor.com>'}</HelpBlock>
     </FormGroup>
     <FormGroup controlId='contentId' {...content}>
-      <ControlLabel>Conteúdo</ControlLabel>
-      <EditorInput />
+      <EditorInput
+        buttonText={intl.formatMessage({
+          id: 'page--communication.form.content.draft-button',
+          defaultMessage: 'Salvar rascunho'
+        })}
+      />
     </FormGroup>
   </SettingsForm>
 )
+
+Page.propTypes = {
+  intl: intlShape.isRequired
+}
+
+export default Page

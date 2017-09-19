@@ -1,4 +1,5 @@
 import React from 'react'
+import { injectIntl, intlShape } from 'react-intl'
 import {
   SettingsPageLayout,
   SettingsPageMenuLayout,
@@ -7,11 +8,23 @@ import {
 import { Tabs, Tab } from '~client/components/navigation'
 
 
-export default ({ children }) => (
+const Container = ({ children, intl }) => (
   <SettingsPageLayout>
-    <SettingsPageMenuLayout title='Nova campanha de email'>
+    <SettingsPageMenuLayout
+      title={intl.formatMessage({
+        id: 'page--communication.title',
+        defaultMessage: 'Nova campanha de email'
+      })}
+    >
       <Tabs>
-        <Tab isActive={true} path='/communication' text='Conteúdo' />
+        <Tab
+          isActive={true}
+          path='/communication'
+          text={intl.formatMessage({
+            id: 'page--communication.tabs.content',
+            defaultMessage: 'Conteúdo'
+          })}
+        />
       </Tabs>
     </SettingsPageMenuLayout>
     <SettingsPageContentLayout>
@@ -19,3 +32,9 @@ export default ({ children }) => (
     </SettingsPageContentLayout>
   </SettingsPageLayout>
 )
+
+Container.propTypes = {
+  intl: intlShape.isRequired
+}
+
+export default injectIntl(Container)

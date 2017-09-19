@@ -1,22 +1,32 @@
 import { connect } from 'react-redux'
 import { reduxForm } from 'redux-form'
+import { injectIntl } from 'react-intl'
 import { isValidFromEmail } from '~client/utils/validation-helper'
 import Page from './page'
 
 const fields = ['name', 'subject', 'sender', 'content']
 
-const validate = (values) => {
+const validate = (values, { intl }) => {
   const errors = {}
+
+  const requiredMessage = intl.formatMessage({
+    id: 'page--communication.form.required-field',
+    defaultMessage: 'Preenchimento obrigatório'
+  })
+
   if (!values.name) {
-    errors.name = 'Preenchimento obrigatório'
+    errors.name = requiredMessage
   }
   if (!values.subject) {
-    errors.subject = 'Preenchimento obrigatório'
+    errors.subject = requiredMessage
   }
   if (!values.sender) {
-    errors.sender = 'Preenchimento obrigatório'
+    errors.sender = requiredMessage
   } else if (!isValidFromEmail(values.sender)) {
-    errors.sender = 'Formato de remetente inválido'
+    errors.sender = intl.formatMessage({
+      id: 'page--communication.form.invalid-sender',
+      defaultMessage: 'Formato de remetente inválido'
+    })
   }
   return errors
 }
@@ -27,6 +37,8 @@ const mapActionsToProps = (dispatch) => ({
   }
 })
 
-export default connect(undefined, mapActionsToProps)(
-  reduxForm({ form: 'createCommunicationForm', fields, validate })(Page)
+export default injectIntl(
+  connect(undefined, mapActionsToProps)(
+    reduxForm({ form: 'createCommunicationForm', fields, validate })(Page)
+  )
 )
