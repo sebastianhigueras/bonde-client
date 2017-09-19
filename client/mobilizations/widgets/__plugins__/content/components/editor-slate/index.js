@@ -62,7 +62,8 @@ class EditorSlate extends Component {
 
   render () {
     const { content, handleSave, handleDelete, readOnly, toolbarStyles, contentStyles } = this.props
-   
+    const { btnSaveLabel } = this.props
+
     let value
     try {
       value = JSON.parse(content)
@@ -112,21 +113,23 @@ class EditorSlate extends Component {
           />
 
           <FooterEditor>
-            <ActionButton
-              editing={this.state.editing}
-              title='Remover'
-              style={{
-                position: 'absolute',
-                right: 0,
-                bottom: 0
-              }}
-              className='mt2'
-              onClick={() => {
-                handleDelete()
-              }}
-            >
-              <i className='fa fa-trash' />
-            </ActionButton>
+            {handleDelete ? (
+              <ActionButton
+                editing={this.state.editing}
+                title='Remover'
+                style={{
+                  position: 'absolute',
+                  right: 0,
+                  bottom: 0
+                }}
+                className='mt2'
+                onClick={() => {
+                  handleDelete()
+                }}
+              >
+                <i className='fa fa-trash' />
+              </ActionButton>
+            ) : null}
             <ActionButton
               editing={this.state.editing}
               className='mt2 right-align'
@@ -135,7 +138,7 @@ class EditorSlate extends Component {
                 handleSave(state)
               }}
             >
-              Salvar
+              {btnSaveLabel || 'Salvar'}
             </ActionButton>
           </FooterEditor>
           <Layer
