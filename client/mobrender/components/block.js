@@ -8,10 +8,8 @@ import BlockChangeBackground from './block-change-background.connected'
 export const HOVER_MOUSE_KEY = 'block'
 
 const getBackgroundStyle = block => {
-  if (block.bg_image) {
-    let betterBg = `https://img.staging.bonde.org/thumbnail?stripmeta=true&compression=true&width=1280&url=${block.bg_image}`
-    return { background: `url('${betterBg}') no-repeat`, backgroundSize: 'cover' }
-  } else if (block.bg_class) {
+  if (block.bg_image) return { background: `url('${block.bg_image}') no-repeat`, backgroundSize: 'cover' }
+  else if (block.bg_class) {
     try {
       const rgba = JSON.parse(block.bg_class)
       return {
