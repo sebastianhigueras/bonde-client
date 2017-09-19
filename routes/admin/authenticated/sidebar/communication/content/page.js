@@ -4,7 +4,8 @@ import { Raw } from 'slate'
 import {
   FormGroup,
   ControlLabel,
-  FormControl
+  FormControl,
+  HelpBlock
 } from '~client/components/forms'
 import { SettingsForm } from '~client/ux/components'
 import EditorSlate, {
@@ -14,11 +15,12 @@ import EditorSlate, {
 class EditorInput extends React.Component {
 
   render () {
-   const { $formGroup: { value, onChange } } = this.context
+    const { $formGroup: { value, onChange } } = this.context
    
-   return (
+    return (
       <EditorSlate
         content={value || ''}
+        btnSaveLabel='Salvar rascunho'
         handleSave={(state) => {
           const raw = JSON.stringify(Raw.serialize(state))
           if (value !== raw) onChange(raw)
@@ -50,7 +52,7 @@ export default ({
       <FormControl placeholder='Pela criação de uma delegacia de desaparecidos' />
     </FormGroup>
     <FormGroup controlId='subjectId' {...subject}>
-      <ControlLabel>Assunto do email</ControlLabel>
+      <ControlLabel maxLength={140}>Assunto do email</ControlLabel>
       <FormControl
         placeholder={'Faça um texto curto capaz'+
         ' de motivar outras pessoas a se unirem a sua'}
@@ -59,6 +61,7 @@ export default ({
     <FormGroup controlId='senderId' {...sender}>
       <ControlLabel>Remetente</ControlLabel>
       <FormControl placeholder='Remetente' />
+      <HelpBlock>{'Ex.: Nome <email@provedor.com>'}</HelpBlock>
     </FormGroup>
     <FormGroup controlId='contentId' {...content}>
       <ControlLabel>Conteúdo</ControlLabel>
