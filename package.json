@@ -120,7 +120,7 @@
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.1.0",
     "sass-loader": "^6.0",
-    "sinon": "^3.2.0",
+    "sinon": "^4.0.0",
     "slate-editor": "^2.6.10",
     "socket.io-client": "^2.0.3",
     "source-map-support": "^0.4.15",
