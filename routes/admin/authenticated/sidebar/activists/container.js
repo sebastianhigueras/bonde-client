@@ -6,7 +6,9 @@ import {
 } from '~client/components/layout'
 import { Loading } from '~client/components/await'
 import Select from 'react-select-plus'
+import ReactFileReader from 'react-file-reader'
 
+import ReaderCSV from './reader-csv'
 import FilterForm from './component/filter-form'
 import ActivistDetailHOC from './component/detail'
 
@@ -175,6 +177,14 @@ class Container extends Component {
       })
   }
 
+  handleFileReader (files) {
+    const reader = new FileReader()
+    reader.onload = () => {
+      console.log(ReaderCSV(reader.result))
+    }
+    reader.readAsText(files[0])
+  }
+
   render () {
     const { data, loading, totalCount } = this.props
     const {
@@ -241,17 +251,20 @@ class Container extends Component {
                   <div className={styles.h1}>
                     {totalCount} pessoas
                   </div>
-                )}
-                {selected.length > 0 && (
-                  <div className='Action-btn-group'>
+                )} 
+                <div className='Action-btn-group'>
+                  {selected.length > 0 && (
                     <button
                       type='button'
                       onClick={this.onExportCSV.bind(this)}
                     >
                       Exportar CSV
                     </button>
-                  </div>
-                )}
+                  )}
+                  <ReactFileReader fileTypes='text/csv' handleFiles={this.handleFileReader.bind(this)}>
+                    <button type='button'>Importar CSV</button>  
+                  </ReactFileReader>
+                </div>
               </div>
 
               <div className={styles.tableContainer}>
