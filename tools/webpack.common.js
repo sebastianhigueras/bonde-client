@@ -6,7 +6,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const sourcePath = path.join(__dirname, './../client/')
 const staticsPath = path.join(__dirname, './../public/')
 
+const isProd = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging'
+
 module.exports = {
+  devtool: isProd ? 'source-map' : 'cheap-module-source-map',
   context: sourcePath,
   node: {
     fs: 'empty'
@@ -23,7 +26,8 @@ module.exports = {
   },
   output: {
     path: staticsPath,
-    filename: '[name].[hash].js'
+    filename: '[name].[hash].js',
+    publicPath: isProd ? `https://s3-sa-east-1.amazonaws.com/${process.env.AWS_BUCKET}/` : '/'
   },
   resolve: {
     alias: {
@@ -102,23 +106,75 @@ module.exports = {
       AWS_BUCKET: JSON.stringify(process.env.AWS_BUCKET),
       SENTRY_DSN_PUBLIC: JSON.stringify(process.env.SENTRY_DSN_PUBLIC),
       GOOGLE_FONTS_API_KEY: JSON.stringify(process.env.GOOGLE_FONTS_API_KEY),
-      BOT_URL: JSON.stringify(process.env.BOT_URL)
+      BOT_URL: JSON.stringify(process.env.BOT_URL),
     }),
     new webpack.NamedModulesPlugin(),
     new ExtractTextPlugin({filename: '[name].[hash].css', allChunks: true})
   ],
+
+  performance: isProd && {
+    maxAssetSize: 100,
+    maxEntrypointSize: 300,
+    hints: 'warning'
+  },
+
+  stats: {
+    colors: {
+      green: '\u001b[32m'
+    }
+  },
 
   devServer: {
     allowedHosts: [
       '.bonde.devel',
       'bonde.devel'
     ],
-    host: '0.0.0.0',
+    host: "0.0.0.0",
+    contentBase: './client',
     historyApiFallback: true,
     port: process.env.PORT,
     compress: true,
-    inline: true,
-    noInfo: true,
-    hot: true
+    inline: !isProd,
+    noInfo: !isProd,
+    hot: !isProd,
+    stats: {
+      assets: true,
+      children: false,
+      chunks: false,
+      hash: false,
+      modules: false,
+      publicPath: false,
+      errorDetails: true,
+      timings: true,
+      version: false,
+      warnings: true,
+      colors: {
+        green: '\u001b[32m'
+      }
+    }
   }
 }
+
+
+  // vendor: [
+  //   'react',
+  //   'react-dom',
+  //   'react-ga',
+  //   'react-helmet',
+  //   'react-cookie',
+  //   'react-redux',
+  //   'react-apollo',
+  //   'react-intl',
+  //   'react-router',
+  //   'react-countup',
+  //   'redial',
+  //   'redux',
+  //   'redux-promise',
+  //   'redux-thunk',
+  //   'redux-form',
+  //   'redux-form-validation',
+  //   'raven-js',
+  //   'axios',
+  //   'reapop',
+  //   'format-number'
+  // ]
