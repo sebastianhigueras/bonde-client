@@ -28,7 +28,7 @@ import cookieParser from 'cookie-parser'
 import cookie from 'react-cookie'
 
 import DefaultServerConfig from './config'
-import webpackConfig from '../tools/webpack.client'
+import webpackConfig from '../tools/webpack.dev'
 import { configureStore, client } from '../client/store'
 import createRoutes from '../routes'
 import loadState from './load-state'
