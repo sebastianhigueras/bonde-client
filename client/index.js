@@ -15,6 +15,8 @@ import es from 'react-intl/locale-data/es'
 import en from 'react-intl/locale-data/en'
 import Raven from 'raven-js'
 
+import _ from './styles/main.scss'
+
 const __PROD__ = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging'
 const __TEST__ = process.env.NODE_ENV === 'test'
 
@@ -22,7 +24,7 @@ if (__PROD__ || __TEST__) {
   Raven.config(process.env.SENTRY_DSN_PUBLIC).install()
 }
 
-const initialState = window.INITIAL_STATE || {}
+const initialState = window.INITIAL_STATE || { intl: { currentLocale: 'pt-br', messages: {} }}
 
 // Set up React-Intl
 addLocaleData([...pt, ...es, ...en])

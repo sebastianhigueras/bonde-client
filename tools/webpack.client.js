@@ -5,6 +5,7 @@ const path = require('path')
 const Visualizer = require('webpack-visualizer-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const AssetsPlugin = require('assets-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const S3Plugin = require('webpack-s3-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const sourcePath = path.join(__dirname, './../client/')
@@ -122,6 +123,10 @@ if (isProd) {
   )
 
   plugins.push(
+    new HtmlWebpackPlugin({
+      template: '../tools/index.template.ejs',
+      inject: 'body',
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   )
@@ -188,7 +193,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /(node_modules|server)/
+        exclude: /(node_modules|server|wysihtml-toolbar.min)/
       },
       {
         test: /\.otf|woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -226,11 +231,17 @@ module.exports = {
   },
 
   devServer: {
+    allowedHosts: [
+      '.bonde.devel',
+      'bonde.devel'
+    ],
+    host: "0.0.0.0",
     contentBase: './client',
     historyApiFallback: true,
-    port: 3000,
-    compress: isProd,
+    port: process.env.PORT,
+    compress: true,
     inline: !isProd,
+    noInfo: !isProd,
     hot: !isProd,
     stats: {
       assets: true,

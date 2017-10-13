@@ -9,6 +9,7 @@
     "test:ci": "yarn test --ci --silent --runInBand --logHeapUsage",
     "test:watch": "yarn test -- --watch",
     "test:coverage": "nyc yarn test",
+    "start:dev": "webpack-dev-server --config ./tools/webpack.client.js",
     "start": "nodemon -r 'babel-register' --delay 1 --watch ./server --watch ./tools ./server",
     "start:prod": "node ./build/server.js",
     "build:server": "./node_modules/.bin/webpack --colors --hide-modules --bail -p --config ./tools/webpack.server.js",
@@ -144,6 +145,7 @@
     "webpack-hot-middleware": "2.20.0",
     "webpack-s3-plugin": "1.0.0-rc.0",
     "webpack-visualizer-plugin": "0.1.11",
+    "webpack-dev-server": "^2.9.1",
     "winston": "2.4.0"
   },
   "standard": {
