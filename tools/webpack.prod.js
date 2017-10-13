@@ -7,6 +7,10 @@ const Visualizer = require('webpack-visualizer-plugin')
 const common = require('./webpack.common.js');
 
 module.exports = merge.smart(common, {
+  devtool: 'source-map',
+  output: {
+    publicPath: `https://s3-sa-east-1.amazonaws.com/${process.env.AWS_BUCKET}/`
+  },
   plugins: [
     new AssetsPlugin({ filename: './build/assets.json' }),
     new webpack.HashedModuleIdsPlugin(),

@@ -28,6 +28,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "assets-webpack-plugin": "3.5",
+    "autodll-webpack-plugin": "^0.3.1",
     "axios": "0.17.0",
     "axios-mock-adapter": "1.9.0",
     "babel-cli": "^6.24.1",
@@ -80,6 +81,7 @@
     "helmet": "3.9.0",
     "history": "4.7.2",
     "hpp": "0.2.2",
+    "html-webpack-plugin": "^2.30.1",
     "immutable": "3.8.2",
     "jest": "21.2.1",
     "jquery": "3.2.1",
@@ -143,7 +145,6 @@
     "webpack": "3.8.1",
     "webpack-dev-middleware": "1.12",
     "webpack-hot-middleware": "2.20.0",
-    "webpack-s3-plugin": "1.0.0-rc.0",
     "webpack-visualizer-plugin": "0.1.11",
     "webpack-dev-server": "^2.9.1",
     "winston": "2.4.0"
