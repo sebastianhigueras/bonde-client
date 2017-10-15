@@ -1,4 +1,3 @@
-import reactCookie from 'react-cookie'
 import * as t from '../action-types'
 
 // Dependency module
@@ -41,7 +40,7 @@ export default (state = initialState, action = {}) => {
       }
     case t.EDIT:
       // update community in cache
-      reactCookie.save('community', {
+      cookies.set('community', {
         community: {
           list: {
             currentId: action.community.id,
@@ -57,7 +56,7 @@ export default (state = initialState, action = {}) => {
       }
     case t.SELECT:
       if (state.currentId !== action.id) {
-        reactCookie.save('community', {
+        cookies.set('community', {
           community: {
             list: {
               currentId: action.id,
