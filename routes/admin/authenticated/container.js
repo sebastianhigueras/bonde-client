@@ -6,7 +6,7 @@ import { load } from '~client/account/redux/action-creators'
 import fetchCurrentUser from '~client/account/queries/current-user'
 import AuthSelectors from '~client/account/redux/selectors'
 import { withCookies, Cookies } from 'react-cookie'
-import { instanceOf } from 'prop-types';
+import { instanceOf } from 'prop-types'
 
 class CurrentUserContainer extends Component {
 
@@ -41,6 +41,10 @@ class CurrentUserContainer extends Component {
       </div>
     )
   }
+}
+
+CurrentUserContainer.propTypes = {
+  cookies: instanceOf(Cookies).isRequired
 }
 
 const mapStateToProps = state => ({

@@ -1,12 +1,12 @@
-import { showMobilizationPublicView, getDomain } from '~routes/utils'
-import serverConfig from '~server/config'
+// import { showMobilizationPublicView, getDomain } from '~routes/utils'
+// import serverConfig from '~server/config'
 
 // polyfill webpack require.ensure
 if (typeof require.ensure !== 'function') require.ensure = (d, c) => c(require)
 
-const whitelistedPublicRoutes = [
-  /^\/subscriptions\/\d+\/edit$/ // /subscriptions/:id/edit
-]
+// const whitelistedPublicRoutes = [
+//   /^\/subscriptions\/\d+\/edit$/ // /subscriptions/:id/edit
+// ]
 
 export default store => ({
   getChildRoutes (location, cb) {
@@ -20,9 +20,9 @@ export default store => ({
       //     require('./public').default(store)
       //   ])
       // } else {
-        cb(null, [
-          require('./admin').default(store)
-        ])
+      cb(null, [
+        require('./admin').default(store)
+      ])
       // }
     })
   }

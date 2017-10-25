@@ -1,4 +1,5 @@
 import * as t from '../action-types'
+import cookies from 'universal-cookie'
 
 // Dependency module
 import * as authT from '~client/account/redux/action-types'

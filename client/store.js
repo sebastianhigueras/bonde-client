@@ -28,10 +28,11 @@ networkInterface.use([{
     const cookies = new Cookies() // req.headers.cookie
     const state = cookies.getAll() || {}
 
-    if (state.auth.auth && state.auth.auth.credentials && requiredAuth) {
+    if (state.auth && state.auth.auth && state.auth.auth.credentials && requiredAuth) {
       const token = state.auth.auth.credentials['access-token']
       req.options.headers.authorization = `Bearer ${token}`
     }
+    next()
   }
 }])
 
