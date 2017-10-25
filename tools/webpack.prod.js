@@ -1,10 +1,10 @@
-const webpack = require('webpack');
-const merge = require('webpack-merge');
+const webpack = require('webpack')
+const merge = require('webpack-merge')
 const AssetsPlugin = require('assets-webpack-plugin')
 // const S3Plugin = require('webpack-s3-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const Visualizer = require('webpack-visualizer-plugin')
-const common = require('./webpack.common.js');
+const common = require('./webpack.common.js')
 
 module.exports = merge.smart(common, {
   devtool: 'source-map',
@@ -45,7 +45,7 @@ module.exports = merge.smart(common, {
       filename: './build/main.stats.html'
     })
   ]
-});
+})
 
 // if ('AWS_ACCESS_KEY_ID' in process.env) {
 //   plugins.push(

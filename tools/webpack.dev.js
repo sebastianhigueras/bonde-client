@@ -1,17 +1,12 @@
 const webpack = require('webpack')
-const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
+const merge = require('webpack-merge')
+const common = require('./webpack.common.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const AutoDllPlugin = require('autodll-webpack-plugin')
 
 module.exports = merge(common, {
-  name: "main",
+  name: 'main',
   devtool: 'cheap-module-source-map',
-  entry: {
-    main: [
-      'webpack-hot-middleware/client'
-    ]
-  },
   output: {
     publicPath: 'http://app.bonde.devel:' + process.env.PORT + '/'
   },
@@ -63,9 +58,9 @@ module.exports = merge(common, {
     }),
     new HtmlWebpackPlugin({
       template: '../tools/index.template.ejs',
-      inject: 'body',
+      inject: 'body'
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ]
-});
+})

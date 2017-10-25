@@ -24,7 +24,7 @@ import webpack from 'webpack'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
 import cookiesMiddleware from 'universal-cookie-express'
-import { CookiesProvider } from 'react-cookie';
+import { CookiesProvider } from 'react-cookie'
 
 import DefaultServerConfig from './config'
 import webpackConfig from '../tools/webpack.dev'
