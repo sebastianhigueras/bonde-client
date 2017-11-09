@@ -9,11 +9,6 @@ import { withCookies, Cookies } from 'react-cookie'
 import { instanceOf } from 'prop-types'
 
 class CurrentUserContainer extends Component {
-
-  static propTypes = {
-    cookies: instanceOf(Cookies).isRequired
-  }
-
   componentDidMount () {
     const { cookies } = this.props
     console.log(cookies.getAll())
