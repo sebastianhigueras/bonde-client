@@ -81,7 +81,7 @@
     "jest": "21.2.1",
     "jquery": "3.2.1",
     "keycode": "2.1.9",
-    "lint-staged": "^4.3.0",
+    "lint-staged": "^5.0.0",
     "mocha": "3.5.0",
     "morgan": "1.9.0",
     "newrelic": "2.3.0",
