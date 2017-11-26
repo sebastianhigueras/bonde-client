@@ -140,7 +140,7 @@
     "url-loader": "0.6.2",
     "webpack": "3.8.1",
     "webpack-dev-middleware": "1.12",
-    "webpack-hot-middleware": "2.20.0",
+    "webpack-hot-middleware": "2.21.0",
     "webpack-s3-plugin": "1.0.0-rc.0",
     "webpack-visualizer-plugin": "0.1.11",
     "winston": "2.4.0"
