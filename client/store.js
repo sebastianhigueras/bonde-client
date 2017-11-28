@@ -28,8 +28,8 @@ networkInterface.use([{
     const cookies = new Cookies() // req.headers.cookie
     const state = cookies.getAll() || {}
 
-    if (state.auth && state.auth.auth && state.auth.auth.credentials && requiredAuth) {
-      const token = state.auth.auth.credentials['access-token']
+    if (state.auth && state.auth['access-token'].length > 0 && requiredAuth) {
+      const token = state.auth['access-token']
       req.options.headers.authorization = `Bearer ${token}`
     }
     next()

@@ -4,23 +4,23 @@ import { graphql } from 'react-apollo'
 import { Loading } from '~client/components/await'
 import { load } from '~client/account/redux/action-creators'
 import fetchCurrentUser from '~client/account/queries/current-user'
-import AuthSelectors from '~client/account/redux/selectors'
+import AccountSelectors from '~client/account/redux/selectors'
 import { withCookies, Cookies } from 'react-cookie'
 import { instanceOf } from 'prop-types'
 
 class CurrentUserContainer extends Component {
   componentDidMount () {
-    const { cookies } = this.props
-    console.log(cookies.getAll())
-    // if (this.props.data.currentUser && !this.props.user) {
-    //   this.props.load(this.props.data.currentUser)
-    // }
+    // const { cookies } = this.props
+    // console.log(cookies.getAll())
+    if (this.props.data.currentUser && !this.props.user) {
+      this.props.load(this.props.data.currentUser)
+    }
   }
 
   componentWillReceiveProps (nextProps, nextState) {
     const { currentUser } = this.props.data
     const { currentUser: nextCurrentUser } = nextProps.data
-
+    // console.log(currentUser)
     if ((!currentUser && nextCurrentUser) || (currentUser && currentUser !== nextCurrentUser)) {
       this.props.load(nextCurrentUser)
     }
@@ -43,7 +43,7 @@ CurrentUserContainer.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  user: AuthSelectors(state).getUser()
+  user: AccountSelectors(state).getUser()
 })
 
 export default graphql(fetchCurrentUser, {
