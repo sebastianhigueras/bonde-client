@@ -106,7 +106,7 @@ module.exports = {
       AWS_BUCKET: JSON.stringify(process.env.AWS_BUCKET),
       SENTRY_DSN_PUBLIC: JSON.stringify(process.env.SENTRY_DSN_PUBLIC),
       GOOGLE_FONTS_API_KEY: JSON.stringify(process.env.GOOGLE_FONTS_API_KEY),
-      BOT_URL: JSON.stringify(process.env.BOT_URL),
+      BOT_URL: JSON.stringify(process.env.BOT_URL)
     }),
     new webpack.NamedModulesPlugin(),
     new ExtractTextPlugin({filename: '[name].[hash].css', allChunks: true})
@@ -129,7 +129,7 @@ module.exports = {
       '.bonde.devel',
       'bonde.devel'
     ],
-    host: "0.0.0.0",
+    host: '0.0.0.0',
     contentBase: './client',
     historyApiFallback: true,
     port: process.env.PORT,
@@ -155,26 +155,25 @@ module.exports = {
   }
 }
 
-
-  // vendor: [
-  //   'react',
-  //   'react-dom',
-  //   'react-ga',
-  //   'react-helmet',
-  //   'react-cookie',
-  //   'react-redux',
-  //   'react-apollo',
-  //   'react-intl',
-  //   'react-router',
-  //   'react-countup',
-  //   'redial',
-  //   'redux',
-  //   'redux-promise',
-  //   'redux-thunk',
-  //   'redux-form',
-  //   'redux-form-validation',
-  //   'raven-js',
-  //   'axios',
-  //   'reapop',
-  //   'format-number'
-  // ]
+// vendor: [
+//   'react',
+//   'react-dom',
+//   'react-ga',
+//   'react-helmet',
+//   'react-cookie',
+//   'react-redux',
+//   'react-apollo',
+//   'react-intl',
+//   'react-router',
+//   'react-countup',
+//   'redial',
+//   'redux',
+//   'redux-promise',
+//   'redux-thunk',
+//   'redux-form',
+//   'redux-form-validation',
+//   'raven-js',
+//   'axios',
+//   'reapop',
+//   'format-number'
+// ]

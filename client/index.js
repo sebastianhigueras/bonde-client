@@ -15,6 +15,7 @@ import pt from 'react-intl/locale-data/pt'
 import es from 'react-intl/locale-data/es'
 import en from 'react-intl/locale-data/en'
 import Raven from 'raven-js'
+import localeData from '../intl/locale-data'
 
 require('./styles/main.scss')
 
@@ -26,7 +27,7 @@ if (__PROD__ || __TEST__) {
 }
 
 const initialState = window.INITIAL_STATE || {
-  intl: { currentLocale: 'pt-BR', messages: {} }
+  intl: { currentLocale: 'pt-BR', messages: localeData }
 }
 
 // Set up React-Intl
