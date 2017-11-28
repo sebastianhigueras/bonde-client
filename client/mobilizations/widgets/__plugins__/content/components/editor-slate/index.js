@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { FormattedMessage } from 'react-intl'
+import { injectIntl, intlShape, FormattedMessage } from 'react-intl'
 import Plain from 'slate-plain-serializer'
 import {
   SlateEditor, SlateToolbar, SlateContent,
@@ -57,16 +57,16 @@ class EditorSlate extends Component {
     super(props)
     this.state = {
       editing: false,
-      loading: false
+      loading: false,
+      initialState: Plain.deserialize(JSON.parse(props.content)).toJSON()
     }
   }
 
   render () {
-    const { content, handleSave, handleDelete, readOnly, toolbarStyles, contentStyles } = this.props
-    const initialState = JSON.parse(content)
+    const { handleSave, handleDelete, readOnly, toolbarStyles, contentStyles } = this.props
     return (
       <div className='widgets--content-plugin'>
-        <SlateEditor plugins={plugins} initialState={initialState} style={{ color: '#fff' }}>
+        <SlateEditor plugins={plugins} initialState={this.state.initialState} style={{ color: '#fff' }}>
           <SlateToolbar style={{
             ...styles.toolbar,
             display: this.state.editing ? 'block' : 'none',
@@ -116,9 +116,9 @@ class EditorSlate extends Component {
             <ActionButton
               editing={this.state.editing}
               className='mt2 right-align'
-              onClick={value => {
-                this.setState({ editing: false })
-                handleSave(value)
+              onClick={state => {
+                this.setState({ editing: false, initialState: state })
+                handleSave(state)
               }}
             >
               <FormattedMessage
@@ -129,9 +129,14 @@ class EditorSlate extends Component {
           </FooterEditor>
           <Layer
             editing={this.state.editing}
-            onClick={value => {
-              this.setState({ editing: false })
-              handleSave(value)
+            onClick={(state, setState) => {
+              if (window.confirm(this.props.intl.formatMessage({
+                id: 'c--editor-slate.button-cancel.text',
+                defaultMessage: 'Deseja mesmo sair do modo edição? Suas alterações não serão salvas.'
+              }))) {
+                this.setState({ editing: false })
+                setState(this.state.initialState)
+              }
             }}
           />
         </SlateEditor>
@@ -139,6 +144,10 @@ class EditorSlate extends Component {
       </div>
     )
   }
+}
+
+EditorSlate.propTypes = {
+  intl: intlShape.isRequired
 }
 
 EditorSlate.defaultProps = {
@@ -149,4 +158,4 @@ export const createEditorContent = content => JSON.stringify(
   Plain.deserialize(content).toJSON()
 )
 
-export default EditorSlate
+export default injectIntl(EditorSlate)
