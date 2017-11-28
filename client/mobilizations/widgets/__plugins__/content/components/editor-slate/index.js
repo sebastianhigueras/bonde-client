@@ -118,6 +118,12 @@ class EditorSlate extends Component {
             onFocus={() => {
               if (!readOnly) this.setState({ editing: true })
             }}
+            onKeyDown={(event, data, state) => {
+              if (data.isMod && data.key === 's') {
+                event.preventDefault()
+                this.handleSave(state)
+              }
+            }}
             className={!readOnly ? 'editable' : ''}
             readOnly={readOnly}
           />
