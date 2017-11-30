@@ -1,4 +1,8 @@
 
+const defaultFilter = {
+  status: 'active'
+}
+
 export default (state, props) => ({
 
   getMobilization: () => {
@@ -28,9 +32,9 @@ export default (state, props) => ({
     return state.mobilizations.list.menuActiveIndex
   },
 
-  getMobilizations: () => {
+  getMobilizations: ({ status } = defaultFilter) => {
     const { list: { data } } = state.mobilizations
-    return data
+    return status ? data.filter(m => m.status === status) : data
   },
 
   hasCurrentMobilization: () => {

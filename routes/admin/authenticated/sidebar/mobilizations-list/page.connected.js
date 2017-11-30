@@ -7,8 +7,9 @@ import Page from './page'
 
 const mapStateToProps = (state, props) => {
   const selectors = MobSelectors(state, props)
+  const { location: { query } } = props
   return {
-    mobilizations: selectors.getMobilizations(),
+    mobilizations: selectors.getMobilizations(query),
     menuActiveIndex: selectors.getMobilizationMenuActive()
   }
 }
