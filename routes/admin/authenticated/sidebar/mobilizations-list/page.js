@@ -119,7 +119,7 @@ export class MobilizationsListPage extends Component {
                             this.props.toggleMenu(undefined)
                           })
                       }}
-                      icon='file'
+                      icon='archive'
                     />
                   </MoreMenu>
                 </More>
