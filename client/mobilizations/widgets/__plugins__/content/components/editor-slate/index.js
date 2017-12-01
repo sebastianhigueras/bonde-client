@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FormattedMessage } from 'react-intl'
-import { Raw, Plain } from 'slate'
+import Plain from 'slate-plain-serializer'
 import {
   SlateEditor, SlateToolbar, SlateContent,
   AlignmentPlugin, AlignmentButtonBar,
@@ -63,7 +63,7 @@ class EditorSlate extends Component {
 
   render () {
     const { content, handleSave, handleDelete, readOnly, toolbarStyles, contentStyles } = this.props
-    const initialState = Raw.deserialize(JSON.parse(content), { terse: true })
+    const initialState = JSON.parse(content)
     return (
       <div className='widgets--content-plugin'>
         <SlateEditor plugins={plugins} initialState={initialState} style={{ color: '#fff' }}>
@@ -146,7 +146,7 @@ EditorSlate.defaultProps = {
 }
 
 export const createEditorContent = content => JSON.stringify(
-  Raw.serialize(Plain.deserialize(content), { terse: true })
+  Plain.deserialize(content).toJSON()
 )
 
 export default EditorSlate
