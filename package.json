@@ -88,7 +88,7 @@
     "morgan": "1.9.0",
     "newrelic": "2.3.0",
     "node-sass": "4.5",
-    "nodemon": "1.12.1",
+    "nodemon": "1.12.5",
     "nyc": "11.2.1",
     "opn": "5.1.0",
     "postcss-loader": "2.0.8",
