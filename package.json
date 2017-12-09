@@ -98,7 +98,7 @@
     "raven": "2.2.1",
     "raven-js": "3.19.1",
     "react": "15.5",
-    "react-apollo": "1.2.0",
+    "react-apollo": "2.0.4",
     "react-color": "2.13.8",
     "react-cookie": "1.0.4",
     "react-countup": "2.3.0",
