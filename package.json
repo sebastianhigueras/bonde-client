@@ -108,7 +108,7 @@
     "react-intl": "2.4.0",
     "react-redux": "5.0.6",
     "react-router": "2.8.1",
-    "react-s3-uploader": "4.1.1",
+    "react-s3-uploader": "4.6.0",
     "react-select-plus": "1.0.0-rc.10",
     "react-test-renderer": "15.5",
     "reapop": "1.1.3",
