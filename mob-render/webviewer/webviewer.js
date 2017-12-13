@@ -7,7 +7,7 @@
 		exports["webviewer"] = factory();
 	else
 		root["webviewer"] = factory();
-})(typeof self !== 'undefined' ? self : this, function() {
+})(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -23392,6 +23392,15 @@ Object.defineProperty(exports, 'Mobilization', {
   }
 });
 
+var _redux = __webpack_require__("./mobrender/redux/index.js");
+
+Object.defineProperty(exports, 'Reducer', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_redux).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
@@ -25602,6 +25611,45 @@ var EXPORT_DATACLIP_SUCCESS = exports.EXPORT_DATACLIP_SUCCESS = 'EXPORT_DATACLIP
 var EXPORT_DATACLIP_FAILURE = exports.EXPORT_DATACLIP_FAILURE = 'EXPORT_DATACLIP_FAILURE';
 var EXPORT_DATACLIP_NO_DATA_FOUND = exports.EXPORT_DATACLIP_NO_DATA_FOUND = 'EXPORT_DATACLIP_NO_DATA_FOUND';
 var EXPORT_DATACLIP_MOUNT = exports.EXPORT_DATACLIP_MOUNT = 'EXPORT_DATACLIP_MOUNT';
+
+/***/ }),
+
+/***/ "./mobrender/redux/index.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _actionCreators = __webpack_require__("./mobrender/redux/action-creators/index.js");
+
+var actions = _interopRequireWildcard(_actionCreators);
+
+var _actionTypes = __webpack_require__("./mobrender/redux/action-types.js");
+
+var actionTypes = _interopRequireWildcard(_actionTypes);
+
+var _reducers = __webpack_require__("./mobrender/redux/reducers/index.js");
+
+var _reducers2 = _interopRequireDefault(_reducers);
+
+var _selectors = __webpack_require__("./mobrender/redux/selectors.js");
+
+var _selectors2 = _interopRequireDefault(_selectors);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+exports.default = {
+  actions: actions,
+  reducer: _reducers2.default,
+  selectors: _selectors2.default,
+  actionTypes: actionTypes
+};
 
 /***/ }),
 
