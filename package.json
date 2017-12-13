@@ -14,6 +14,7 @@
     "start:prod": "node ./build/server.js",
     "build:server": "./node_modules/.bin/webpack --colors --hide-modules --bail -p --config ./tools/webpack.server.js",
     "build:client": "./node_modules/.bin/webpack --colors --hide-modules --bail --config ./tools/webpack.prod.js",
+    "build:webviewer": "./node_modules/.bin/webpack --colors --hide-modules --bail --config ./tools/webpack.webviewer.js",
     "clean": "rm -rf build",
     "routes": "grep -rhe @path ./routes/ | sort",
     "release": "./node_modules/.bin/standard-version",
