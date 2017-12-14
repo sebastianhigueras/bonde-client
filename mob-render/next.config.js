@@ -5,7 +5,7 @@ module.exports = {
         test: /\.css$/,
         loader: 'emit-file-loader',
         options: {
-            name: 'dist/[path][name].[ext]'
+          name: 'dist/[path][name].[ext]'
         }
       },
       {

@@ -169,7 +169,10 @@
       "PagarMeCheckout",
       "confirm"
     ],
-    "parser": "babel-eslint"
+    "parser": "babel-eslint",
+    "ignore": [
+      "mob-render/webviewer/*"
+    ]
   },
   "engines": {
     "node": "~9"
