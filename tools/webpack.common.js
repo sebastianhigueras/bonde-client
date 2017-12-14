@@ -9,7 +9,6 @@ const staticsPath = path.join(__dirname, './../public/')
 const isProd = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging'
 
 module.exports = {
-  devtool: isProd ? 'source-map' : 'cheap-module-source-map',
   context: sourcePath,
   node: {
     fs: 'empty'
