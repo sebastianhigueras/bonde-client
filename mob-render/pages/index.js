@@ -34,6 +34,7 @@ export default class extends React.Component {
   static async getInitialProps ({ req }) {
     if (req) {
       const host = req.headers['host']
+      // eslint-disable-next-line
       const regex = host.match(`(.+)\.${APP_DOMAIN}`)
 
       const where = regex
