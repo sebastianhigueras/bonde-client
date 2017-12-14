@@ -119,7 +119,7 @@ var initialState = {
 
 var reducer = function reducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments[1];
+  var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   switch (action.type) {
     case t.SET_CURRENT_LOCALE:
@@ -5412,7 +5412,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
             win = null;
         });
     });
-    
+
 
     /*----------------------------------------------------------------------------------------------------------------*/
 
@@ -6964,7 +6964,7 @@ var initialState = exports.initialState = {
 
 exports.default = function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments[1];
+  var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   switch (action.type) {
     case t.SET_LOADING:
@@ -7105,7 +7105,7 @@ var initialState = {
 
 var ColorPickerReducer = function ColorPickerReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments[1];
+  var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   switch (action.type) {
     case _actions.SET_SELECTED_COLOR:
@@ -10750,7 +10750,7 @@ var initialState = exports.initialState = {
   //
 };var FilterableSearchBarReducer = function FilterableSearchBarReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments[1];
+  var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   switch (action.type) {
     case _actions.FILTERABLE_SEARCH_BAR_SET_LIST:
@@ -13918,7 +13918,7 @@ var initialState = exports.initialState = {};
 //
 var SelectableListReducer = function SelectableListReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments[1];
+  var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   switch (action.type) {
     case _actions.SELECTABLE_LIST_SET_SELECTED_INDEX:
@@ -14383,7 +14383,7 @@ var initialState = {
 
 var sourceRequest = function sourceRequest() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments[1];
+  var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   return state;
 };
 
@@ -14923,7 +14923,7 @@ var initialState = exports.initialState = {
 
 var MobilizationTemplatesReducer = function MobilizationTemplatesReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments[1];
+  var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   switch (action.type) {
     case t.REQUEST_TEMPLATE_CREATE:
@@ -15205,18 +15205,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ActionButton = function ActionButton(_ref) {
   var children = _ref.children,
       editing = _ref.editing,
-      onChange = _ref.onChange,
+      setState = _ref.setState,
       _onClick = _ref.onClick,
       title = _ref.title,
       style = _ref.style,
       className = _ref.className,
-      state = _ref.state;
+      value = _ref.value;
   return _react2.default.createElement(
     'button',
     {
       className: (0, _classnames2.default)('btn bg-blacker rounded', className),
       onClick: function onClick() {
-        return _onClick(state, onChange);
+        return _onClick(value, setState);
       },
       style: _extends({
         position: 'relative',
@@ -15754,7 +15754,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactIntl = __webpack_require__("react-intl");
 
-var _slate = __webpack_require__("slate");
+var _slatePlainSerializer = __webpack_require__("slate-plain-serializer");
+
+var _slatePlainSerializer2 = _interopRequireDefault(_slatePlainSerializer);
 
 var _slateEditor = __webpack_require__("slate-editor");
 
@@ -15803,7 +15805,7 @@ var EditorSlate = function (_Component) {
     _this.state = {
       editing: false,
       loading: false,
-      initialState: _slate.Raw.deserialize(JSON.parse(props.content), { terse: true })
+      initialState: _slatePlainSerializer2.default.deserialize(JSON.parse(props.content)).toJSON()
     };
     return _this;
   }
@@ -15811,8 +15813,8 @@ var EditorSlate = function (_Component) {
   _createClass(EditorSlate, [{
     key: 'handleCancelEditionMode',
     value: function handleCancelEditionMode(state, setState) {
-      var initialRaw = JSON.stringify(_slate.Raw.serialize(this.state.initialState));
-      var raw = JSON.stringify(_slate.Raw.serialize(state));
+      var initialRaw = _slatePlainSerializer2.default.serialize(this.state.initialState);
+      var raw = _slatePlainSerializer2.default.serialize(state);
       if (initialRaw !== raw) {
         if (window.confirm(this.props.intl.formatMessage({
           id: 'c--editor-slate.button-cancel.message',
@@ -15874,7 +15876,7 @@ var EditorSlate = function (_Component) {
           _react2.default.createElement(_slateEditor.SlateContent, {
             wrapperStyle: { position: 'relative', zIndex: this.state.editing ? 4 : 'inherit' },
             style: _extends({ minHeight: 150 }, contentStyles),
-            onSelectionChange: function onSelectionChange() {
+            onFocus: function onFocus() {
               if (!readOnly) _this2.setState({ editing: true });
             },
             onKeyDown: function onKeyDown(event, data, state) {
@@ -15951,7 +15953,7 @@ EditorSlate.defaultProps = {
 };
 
 var createEditorContent = exports.createEditorContent = function createEditorContent(content) {
-  return JSON.stringify(_slate.Raw.serialize(_slate.Plain.deserialize(content), { terse: true }));
+  return JSON.stringify(_slatePlainSerializer2.default.deserialize(content).toJSON());
 };
 
 exports.default = (0, _reactIntl.injectIntl)(EditorSlate);
@@ -16156,8 +16158,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Layer = function Layer(_ref) {
   var editing = _ref.editing,
       _onClick = _ref.onClick,
-      state = _ref.state,
-      onChange = _ref.onChange;
+      value = _ref.value,
+      setState = _ref.setState;
   return _react2.default.createElement('div', {
     style: {
       display: editing ? 'block' : 'none',
@@ -16170,7 +16172,7 @@ var Layer = function Layer(_ref) {
       zIndex: 1
     },
     onClick: function onClick() {
-      return _onClick(state, onChange);
+      return _onClick(value, setState);
     }
   });
 };
@@ -24075,8 +24077,6 @@ var _classnames2 = _interopRequireDefault(_classnames);
 
 var _reactIntl = __webpack_require__("react-intl");
 
-var _reactRouter = __webpack_require__("react-router");
-
 var _await = __webpack_require__("./components/await/index.js");
 
 var _widgetOverlay = __webpack_require__("./mobrender/components/widget-overlay.connected.js");
@@ -24096,7 +24096,8 @@ var Widget = function Widget(_ref) {
       widget = _ref.widget,
       update = _ref.update,
       editable = _ref.editable,
-      intl = _ref.intl;
+      intl = _ref.intl,
+      history = _ref.history;
 
   // Resize column widget
   var smSize = widget.sm_size,
@@ -24124,7 +24125,7 @@ var Widget = function Widget(_ref) {
       {
         widget: widget,
         onEdit: function onEdit() {
-          _reactRouter.browserHistory.push(redirect);
+          return history.push(redirect);
         },
         onDelete: function onDelete() {
           var message = intl.formatMessage({
@@ -25791,7 +25792,7 @@ var initialState = {
 
 function dataExport() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments[1];
+  var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   switch (action.type) {
     case t.EXPORT_DATACLIP_REQUEST:
@@ -26005,7 +26006,7 @@ var initialState = exports.initialState = {
 
 exports.default = function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments[1];
+  var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   switch (action.type) {
     case t.ADD_MOBILIZATION_REQUEST:
@@ -26314,6 +26315,7 @@ exports.default = function (state, props) {
     },
 
     getEditing: function getEditing() {
+      console.log(state)
       var edition = state.mobilizations.edition;
 
       return edition.isEditing ? edition.mode : undefined;
@@ -26820,10 +26822,11 @@ networkInterface.use([{
     var requiredAuth = req.request.operationName !== 'authenticate';
 
     _reactCookie2.default.plugToRequest(req);
-    var state = _reactCookie2.default.load('auth') || {};
-    if (state.auth && state.auth.credentials && requiredAuth) {
-      var token = state.auth.credentials['access-token'];
-      req.options.headers.authorization = 'Bearer ' + token;
+
+    var localStorageAuth = window.localStorage.getItem('auth');
+    var auth = localStorageAuth ? JSON.parse(localStorageAuth) : {};
+    if (auth && auth.credentials && requiredAuth) {
+      req.options.headers.authorization = 'Bearer ' + auth.credentials['access-token'];
     }
     next();
   }
@@ -28805,17 +28808,17 @@ module.exports = require("redux-thunk");
 
 /***/ }),
 
-/***/ "slate":
-/***/ (function(module, exports) {
-
-module.exports = require("slate");
-
-/***/ }),
-
 /***/ "slate-editor":
 /***/ (function(module, exports) {
 
 module.exports = require("slate-editor");
+
+/***/ }),
+
+/***/ "slate-plain-serializer":
+/***/ (function(module, exports) {
+
+module.exports = require("slate-plain-serializer");
 
 /***/ }),
 
