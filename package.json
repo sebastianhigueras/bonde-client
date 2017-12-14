@@ -10,7 +10,7 @@
     "test:watch": "yarn test -- --watch",
     "test:coverage": "nyc yarn test",
     "start": "webpack-dev-server --config ./tools/webpack.dev.js",
-    "build:client": "./node_modules/.bin/webpack --colors --hide-modules --bail -p --config ./tools/webpack.client.js",
+    "build:client": "./node_modules/.bin/webpack --colors --hide-modules --bail -p --config ./tools/webpack.prod.js",
     "build:webviewer": "./node_modules/.bin/webpack --colors --hide-modules --bail --config ./tools/webpack.webviewer.js",
     "clean": "rm -rf build",
     "routes": "grep -rhe @path ./routes/ | sort",
