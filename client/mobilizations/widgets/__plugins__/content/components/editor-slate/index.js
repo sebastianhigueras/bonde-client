@@ -90,7 +90,7 @@ class EditorSlate extends Component {
           <SlateContent
             wrapperStyle={{ position: 'relative', zIndex: this.state.editing ? 4 : 'inherit' }}
             style={{ minHeight: 150, ...contentStyles }}
-            onSelectionChange={() => {
+            onFocus={() => {
               if (!readOnly) this.setState({ editing: true })
             }}
             className={!readOnly ? 'editable' : ''}
@@ -116,9 +116,9 @@ class EditorSlate extends Component {
             <ActionButton
               editing={this.state.editing}
               className='mt2 right-align'
-              onClick={state => {
+              onClick={value => {
                 this.setState({ editing: false })
-                handleSave(state)
+                handleSave(value)
               }}
             >
               <FormattedMessage
@@ -129,9 +129,9 @@ class EditorSlate extends Component {
           </FooterEditor>
           <Layer
             editing={this.state.editing}
-            onClick={state => {
+            onClick={value => {
               this.setState({ editing: false })
-              handleSave(state)
+              handleSave(value)
             }}
           />
         </SlateEditor>
