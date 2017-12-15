@@ -46,7 +46,7 @@ pipeline:
       - export SENTRY_DSN_PUBLIC=$STAG_SENTRY_DSN_PUBLIC
       - export GOOGLE_FONTS_API_KEY=$STAG_GOOGLE_FONTS_API_KEY
       - cd mob-render
-      - next build
+      - ./node_modules/.bin/next build
     secrets: [ stag_pagarme_key, stag_sentry_dsn_public, stag_google_fonts_api_key ]
     when:
       status: success
